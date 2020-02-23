@@ -1,0 +1,32 @@
+button {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  background-color: green;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.primary {
+  border-color: var(--primary);
+  color: var(--primary);
+
+  &:hover,
+  &:active {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+.clear {
+  border: none;
+  color: black;
+}

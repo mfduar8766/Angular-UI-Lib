@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+}
+
+.defaultInputStyle {
+  width: 25rem;
+}
+
+.search-results {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 88%;
+  height: 100%;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.disabled-class {
+  background-color: lightgray;
+}
+
+.list-items {
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  color: white;
+  background-color: #4c4c4c;
+}
+
+.list-items:hover {
+  color: black;
+  background-color: white;
+}

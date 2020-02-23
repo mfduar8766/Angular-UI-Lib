@@ -1,0 +1,36 @@
+<div class="container height-width">
+  <div class="form-group row align-items-center">
+    <div class="col-xs-12 col-md-12 col-sm-12">
+      <input
+        [class]="isDisabled === true ? 'form-control disabled-class' : 'form-control'"
+        [placeholder]="placeholder"
+        type="search"
+        name="searchQuery"
+        #searchQuery
+        [ngStyle]="stylesClass"
+        [disabled]="isDisabled"
+        (input)="handleSearch(searchQuery.value)"
+      />
+    </div>
+    <div *ngIf="searchQuery.value.length > 0" class="position-relative col-xs-12 col-md-12">
+      <ng-container *ngIf="errorMessage !== null; else showList">
+        <ul class="cursor-pointer search-results">
+          <li class="no-bullets list-items">{{ errorMessage }}</li>
+        </ul>
+      </ng-container>
+      <ng-template #showList>
+        <ul class="cursor-pointer search-results">
+          <li
+            (click)="selectedSearchResult.emit(value)"
+            class="no-bullets list-items"
+            style="text-transform: capitalize;"
+            *ngFor="let value of searchResults; let i = index"
+            :key="i"
+          >
+            {{ value.field }}
+          </li>
+        </ul>
+      </ng-template>
+    </div>
+  </div>
+</div>
