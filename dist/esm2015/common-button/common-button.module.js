@@ -1,0 +1,15 @@
+import { __decorate } from "tslib";
+import { NgModule } from '@angular/core';
+import { CommonButtonComponent } from './common-button.component';
+import { CommonModule } from '@angular/common';
+let CommonButtonModule = class CommonButtonModule {
+};
+CommonButtonModule = __decorate([
+    NgModule({
+        imports: [CommonModule],
+        declarations: [CommonButtonComponent],
+        exports: [CommonButtonComponent],
+    })
+], CommonButtonModule);
+export { CommonButtonModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tbW9uLWJ1dHRvbi5tb2R1bGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9hbmd1bGFyLWNvbW1vbi1jb21wb25lbnRzLyIsInNvdXJjZXMiOlsiY29tbW9uLWJ1dHRvbi9jb21tb24tYnV0dG9uLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUscUJBQXFCLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQUNsRSxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFPL0MsSUFBYSxrQkFBa0IsR0FBL0IsTUFBYSxrQkFBa0I7Q0FBRyxDQUFBO0FBQXJCLGtCQUFrQjtJQUw5QixRQUFRLENBQUM7UUFDUixPQUFPLEVBQUUsQ0FBQyxZQUFZLENBQUM7UUFDdkIsWUFBWSxFQUFFLENBQUMscUJBQXFCLENBQUM7UUFDckMsT0FBTyxFQUFFLENBQUMscUJBQXFCLENBQUM7S0FDakMsQ0FBQztHQUNXLGtCQUFrQixDQUFHO1NBQXJCLGtCQUFrQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDb21tb25CdXR0b25Db21wb25lbnQgfSBmcm9tICcuL2NvbW1vbi1idXR0b24uY29tcG9uZW50JztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5cbkBOZ01vZHVsZSh7XG4gIGltcG9ydHM6IFtDb21tb25Nb2R1bGVdLFxuICBkZWNsYXJhdGlvbnM6IFtDb21tb25CdXR0b25Db21wb25lbnRdLFxuICBleHBvcnRzOiBbQ29tbW9uQnV0dG9uQ29tcG9uZW50XSxcbn0pXG5leHBvcnQgY2xhc3MgQ29tbW9uQnV0dG9uTW9kdWxlIHt9XG4iXX0=
