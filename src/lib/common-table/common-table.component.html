@@ -1,26 +1,78 @@
-<p-table
-  *ngIf="tableData && tableData.length"
-  [columns]="columns"
-  [value]="tableData"
-  dataKey="agencyId"
-  [responsive]="true"
-  [resizableColumns]="true"
-  [rowHover]="true"
-  [rows]="rowsperPage"
-  [scrollable]="true"
->
-  <ng-template pTemplate="header" let-columns>
-    <tr>
-      <th *ngFor="let col of columns">
-        {{ col.header }}
-      </th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-data let-columns="columns">
-    <tr>
-      <td *ngFor="let col of columns">
-        {{ data[col.field] }}
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
+<ng-container *ngIf="tableData && tableData.length; else showErrorMessage">
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+  <p-toast key="deleteSuccess"></p-toast>
+  <p-table
+    #dt
+    [columns]="columns"
+    [value]="tableData"
+    [dataKey]="dataKey"
+    [responsive]="true"
+    [resizableColumns]="true"
+    [rowHover]="true"
+    [rows]="rowsperPage"
+    [scrollable]="true"
+    [style]="styleClass"
+    [rowHover]="true"
+    [totalRecords]="totalRecords"
+    [(first)]="first"
+    [paginator]="showPagination"
+    [(selection)]="selectedData"
+  >
+    <ng-template pTemplate="caption">
+      <div style="display: flex; justify-content: flex-start; height: 100%; width: 100%;">
+        <input
+          pInputText
+          type="text"
+          (input)="dt.filterGlobal($event.target.value, 'contains')"
+          placeholder="Global Search"
+        />
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th style="width: 30%;">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th style="width: 100%; height: 100%;" *ngFor="let col of columns">
+          {{ col.header }}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data let-columns="columns">
+      <tr>
+        <td style="width: 30%;">
+          <p-tableCheckbox [value]="data"></p-tableCheckbox>
+        </td>
+        <td style="width: 50%;">
+          <i (click)="editTableData.emit(data)" style="margin-right: 1rem;" class="cursor-pointer fa fa-pencil"></i>
+          <i (click)="deleteData(data)" class="fa fa-trash cursor-pointer"></i>
+        </td>
+        <td style="width: 100%; height: 100%;" *ngFor="let col of columns">
+          {{ data[col.field] }}
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+      <div style="padding: 1rem;">
+        <button
+          type="button"
+          pButton
+          icon="fa fa-chevron-left"
+          (click)="previousPage()"
+          style="margin-right:.5em"
+          [disabled]="isFirstPage()"
+        ></button>
+        <button type="button" pButton icon="fa fa-refresh" (click)="reset()" style="margin-right:.5em"></button>
+        <button
+          type="button"
+          pButton
+          icon="fa fa-chevron-right"
+          (click)="nextPage()"
+          [disabled]="isLastPage()"
+        ></button>
+        <p-dropdown (onChange)="setRowsPerPage($event)" [options]="rowsPerPageSelection"></p-dropdown>
+      </div>
+    </ng-template>
+  </p-table>
+</ng-container>
+<ng-template #showErrorMessage>No data available.</ng-template>

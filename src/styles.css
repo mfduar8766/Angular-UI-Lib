@@ -9,3 +9,10 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+.ui-paginator .ui-paginator-pages {
+  position: fixed;
+  right: 150px;
+  margin-top: 1rem;
+  height: 100%;
+}

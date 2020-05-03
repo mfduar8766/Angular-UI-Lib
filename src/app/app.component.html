@@ -48,4 +48,15 @@
   <common-tab [tabContent]="tabContent"></common-tab>
   <br />
   <app-dynamic-form [config]="config" (formSubmittedValues)="submit($event)"></app-dynamic-form>
+  <br />
+  <common-table
+    [dataKey]="'agencyId'"
+    [styleClass]="{ height: '100%', width: '50%' }"
+    [tableData]="tableData"
+    [columns]="tableHeaders"
+    [rowsperPage]="5"
+    [rowsPerPageOptions]="[5, 10, 15, 20]"
+    (editTableData)="editTableData($event)"
+  ></common-table>
+  <div style="margin-top: 5rem;"></div>
 </div>
