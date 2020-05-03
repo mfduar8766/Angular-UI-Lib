@@ -9,9 +9,10 @@ import {
   CommonModalModule,
   CommonCardModule,
   CommonSearchModule,
+  CommonTabModule,
   CommonTableModule
 } from 'src/lib/public_api';
-import { PrimeNgModule } from 'src/lib/public_api';
+import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { PrimeNgModule } from 'src/lib/public_api';
     CommonCardModule,
     CommonModalModule,
     CommonSearchModule,
+    CommonTabModule,
     CommonTableModule,
     FormsModule, ReactiveFormsModule,
     PrimeNgModule

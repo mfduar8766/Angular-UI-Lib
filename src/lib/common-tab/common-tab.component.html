@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="tab-container" *ngFor="let item of tabContent; let i = index">
+    <div (click)="setIndex(i)" [class]="currentIndex === i ? 'tabs' : 'not-selected'">
+      <i style="margin-left: 0.3rem;" [class]="item.leftIcon"></i>
+      <div>{{ item.header }}</div>
+      <i (click)="deleteTab(i)" style="margin-right: 0.3rem;" [class]="canDelete ? 'fa fa-times' : ''"></i>
+    </div>
+    <div class="tab-content" *ngIf="currentIndex === i">
+      <div>{{ item.content }}</div>
+    </div>
+  </div>
+</div>

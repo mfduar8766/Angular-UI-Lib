@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CommonSearchComponent } from './common-search.component';
 import { PrimeNgModule } from '../PrimeNgModules.module';
+import { CommonSearchComponent } from './common-search.component';
 
 @NgModule({
   imports: [CommonModule, PrimeNgModule],
