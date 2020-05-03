@@ -22,8 +22,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.form.changes.subscribe((change) => {
-      this.form.controls.forEach((control) => {
+    this.form.changes.subscribe(change => {
+      this.form.controls.forEach(control => {
         if (change[control.name] === '') {
           this.form.setDisabled('submit', true);
         } else {
@@ -47,5 +47,17 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   getSelectedResults(data) {
     console.log('DATA', data);
+  }
+
+  editTableData(data) {
+    this.tableData = this.tableData.map(dataValue => {
+      if (dataValue.agencyId === data.agencyId) {
+        return {
+          ...dataValue,
+          agencyName: 'TEST'
+        };
+      }
+      return { ...dataValue };
+    });
   }
 }

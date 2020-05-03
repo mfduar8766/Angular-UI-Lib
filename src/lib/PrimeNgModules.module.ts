@@ -23,6 +23,11 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ToggleButtonModule } from 'primeng/togglebutton';
+import { PaginatorModule } from 'primeng/paginator';
+import { ToastModule } from 'primeng/toast';
+
+import { ConfirmationService } from 'primeng/api';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   imports: [CommonModule],
@@ -48,7 +53,10 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
     TabViewModule,
     TableModule,
     ToolbarModule,
-    ToggleButtonModule
-  ]
+    ToggleButtonModule,
+    PaginatorModule,
+    ToastModule
+  ],
+  providers: [ConfirmationService, MessageService]
 })
 export class PrimeNgModule {}
