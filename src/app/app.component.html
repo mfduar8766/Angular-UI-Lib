@@ -21,9 +21,9 @@
   <hr />
   <common-card [showHeader]="'true'" [showFooter]="'true'">
     <div role="footer">My Footer</div>
-    <div role="header">
+    <div style="height: fit-content; width: fit-content;" role="header">
       HEADER
-      <img style="width: 100%;" src="https://source.unsplash.com/random" alt="random" />
+      <!-- <img style="width: 100%;" src="https://source.unsplash.com/random" alt="random" /> -->
     </div>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque aspernatur quasi quidem eum culpa soluta illum
     obcaecati doloremque labore, accusamus praesentium illo ut mollitia sint nesciunt et quis voluptatum consectetur
@@ -46,5 +46,6 @@
   ></common-search>
   <br /><br /><br />
   <common-tab [tabContent]="tabContent"></common-tab>
-  <br /><br /><br />
+  <br />
+  <app-dynamic-form [config]="config" (formSubmittedValues)="submit($event)"></app-dynamic-form>
 </div>
