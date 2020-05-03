@@ -18,6 +18,7 @@ import { ListboxModule } from 'primeng/listbox';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SpinnerModule } from 'primeng/spinner';
+import { TabViewModule } from 'primeng/tabview';
 import { SidebarModule } from 'primeng/sidebar';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -44,6 +45,7 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
     SelectButtonModule,
     SpinnerModule,
     SidebarModule,
+    TabViewModule,
     TableModule,
     ToolbarModule,
     ToggleButtonModule

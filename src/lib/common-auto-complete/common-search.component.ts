@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'common-search',
   templateUrl: './common-search.component.html',
   styleUrls: ['./common-search.component.css']
 })
-export class CommonSearchComponent implements OnInit {
+export class CommonSearchComponent {
   @Input() isDisabled = false;
   @Input() showDropDown = false;
   @Input() placeholder = 'Search...';
@@ -14,11 +14,8 @@ export class CommonSearchComponent implements OnInit {
   @Output() selectedSearchResult: EventEmitter<any> = new EventEmitter();
   searchQuery = '';
   searchResults = null;
-  errorMessage: string = null;
 
   constructor() {}
-
-  ngOnInit() {}
 
   handleSearch(searchQuery: string) {
     const lowerCaseQueryString = searchQuery.toLocaleLowerCase().trim();
@@ -32,17 +29,12 @@ export class CommonSearchComponent implements OnInit {
 
   checkSearchResults() {
     const searchResults = this.getSearchResults();
-    if (typeof searchResults === 'string') {
-      this.errorMessage = searchResults;
-      this.searchResults = null;
-    }
-    this.errorMessage = null;
     this.searchResults = searchResults;
   }
 
   getSearchResults() {
     const filteredAgents = [];
-    let errorMessage: string;
+    let errorMessage: string = null;
     this.searchArray.forEach(data => {
       Object.values(data)
         .map(value =>
@@ -62,6 +54,6 @@ export class CommonSearchComponent implements OnInit {
           return false;
         });
     });
-    return filteredAgents && filteredAgents.length ? filteredAgents : errorMessage;
+    return filteredAgents && filteredAgents.length ? filteredAgents : [{ field: errorMessage }];
   }
 }
