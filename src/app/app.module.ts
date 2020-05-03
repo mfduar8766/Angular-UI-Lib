@@ -10,7 +10,8 @@ import {
   CommonCardModule,
   CommonSearchModule,
   CommonTabModule,
-  CommonTableModule
+  CommonTableModule,
+  DynamicFormModule
 } from 'src/lib/public_api';
 import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
@@ -25,6 +26,7 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     CommonSearchModule,
     CommonTabModule,
     CommonTableModule,
+    DynamicFormModule,
     FormsModule, ReactiveFormsModule,
     PrimeNgModule
   ],
