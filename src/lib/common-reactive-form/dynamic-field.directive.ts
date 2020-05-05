@@ -9,16 +9,16 @@ import {
   ComponentRef,
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormButtonComponent } from '../Components/form-button/form-button.component';
-import { FormInputComponent } from '../Components/form-input/form-input.component';
-import { FormSelectComponent } from '../Components/form-select/form-select.component';
-import { Field } from '../Models /field.interface';
-import { FieldConfig } from '../Models /fieldConfig.interface';
-import { FormDatePickerComponent } from '../Components/form-date-picker/form-date-picker.component';
-import { FormCheckboxComponent } from '../Components/form-checkbox/form-checkbox.component';
-import { FormRadioComponent } from '../Components/form-radio/form-radio.component';
-import { FormMultiSelectComponent } from '../Components/form-multi-select/form-multi-select.component';
-import { FormSliderComponent } from '../Components/form-slider/form-slider.component';
+import { FormButtonComponent } from './Components/form-button/form-button.component';
+import { FormInputComponent } from './Components/form-input/form-input.component';
+import { FormSelectComponent } from './Components/form-select/form-select.component';
+import { Field } from './Models /field.interface';
+import { FieldConfig } from './Models /fieldConfig.interface';
+import { FormDatePickerComponent } from './Components/form-date-picker/form-date-picker.component';
+import { FormCheckboxComponent } from './Components/form-checkbox/form-checkbox.component';
+import { FormRadioComponent } from './Components/form-radio/form-radio.component';
+import { FormMultiSelectComponent } from './Components/form-multi-select/form-multi-select.component';
+import { FormSliderComponent } from './Components/form-slider/form-slider.component';
 
 const components: { [type: string]: Type<Field> } = {
   button: FormButtonComponent,

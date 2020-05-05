@@ -16,6 +16,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   tableHeaders = tableHeaders;
   tabContent = tabContent;
   config = formConfig;
+  options = [
+    { label: 'French', value: 'French' },
+    { label: 'Asian', value: 'Asian' },
+    { label: 'Italian', value: 'Italian' },
+  ];
 
   constructor() {}
 
@@ -59,5 +64,13 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
       return { ...dataValue };
     });
+  }
+
+  getSelectedValue(value) {
+    console.log('DROP-DOWN VALUE', value);
+  }
+
+  getSelectedMultiValue(value) {
+    console.log('DROP-DOWN VALUE', value);
   }
 }
