@@ -59,4 +59,7 @@
     (editTableData)="editTableData($event)"
   ></common-table>
   <div style="margin-top: 5rem;"></div>
+  <common-dropdown [options]="options" (selectedValue)="getSelectedValue($event)"></common-dropdown>
+  <div style="margin-top: 1rem; margin-bottom: 1rem;"></div>
+  <common-multi-select [options]="options" (selectedValue)="getSelectedMultiValue($event)"></common-multi-select>
 </div>

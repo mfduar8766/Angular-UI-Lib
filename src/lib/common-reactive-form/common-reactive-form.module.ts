@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
-import { DynamicFieldDirective } from './Directives/dynamic-field.directive';
+import { DynamicFieldDirective } from './dynamic-field.directive';
 import { FormButtonComponent } from './Components/form-button/form-button.component';
 import { FormInputComponent } from './Components/form-input/form-input.component';
 import { FormSelectComponent } from './Components/form-select/form-select.component';
