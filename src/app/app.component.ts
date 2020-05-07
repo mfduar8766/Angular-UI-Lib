@@ -19,8 +19,20 @@ export class AppComponent implements OnInit, AfterViewInit {
   options = [
     { label: 'French', value: 'French' },
     { label: 'Asian', value: 'Asian' },
-    { label: 'Italian', value: 'Italian' },
+    { label: 'Italian', value: 'Italian' }
   ];
+  listItems = [
+    { label: 'Call First', command: () => this.callFirst(), disabled: true },
+    { label: 'Call Second', command: () => this.callSecond() }
+  ];
+
+  callFirst() {
+    console.log('FIRST');
+  }
+
+  callSecond() {
+    console.log('SECOND');
+  }
 
   constructor() {}
 
@@ -72,5 +84,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   getSelectedMultiValue(value) {
     console.log('DROP-DOWN VALUE', value);
+  }
+
+  getClickedItem(value) {
+    console.log('CLICKED ITEM', value);
   }
 }

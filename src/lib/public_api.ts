@@ -8,3 +8,4 @@ export * from './common-tab/common-tab.module';
 export * from './common-reactive-form/common-reactive-form.module';
 export * from './common-dropdown/common-dropdown.module';
 export * from './common-multi-select/common-multi-select.module';
+export * from './common-split-button/common-split-button.module';
