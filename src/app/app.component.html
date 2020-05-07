@@ -62,4 +62,11 @@
   <common-dropdown [options]="options" (selectedValue)="getSelectedValue($event)"></common-dropdown>
   <div style="margin-top: 1rem; margin-bottom: 1rem;"></div>
   <common-multi-select [options]="options" (selectedValue)="getSelectedMultiValue($event)"></common-multi-select>
+  <div style="margin-top: 1rem; margin-bottom: 1rem;"></div>
+  <common-split-button
+    [listItems]="listItems"
+    [buttonText]="'Open Modal'"
+    [backgroundColor]="'green'"
+    (handleClick)="getClickedItem($event)"
+  ></common-split-button>
 </div>

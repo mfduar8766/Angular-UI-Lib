@@ -1,0 +1,66 @@
+button {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  background-color: blue;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 100%;
+}
+
+.list-container {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  background: white;
+  left: 30px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.list {
+  list-style: none;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list-disabled {
+  color: gray;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list:hover {
+  background-color: #DDDD;
+  cursor: pointer;
+}
+
+.primary {
+  border-color: var(--primary);
+  color: var(--primary);
+
+  &:hover,
+  &:active {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+.clear {
+  border: none;
+  color: black;
+}
