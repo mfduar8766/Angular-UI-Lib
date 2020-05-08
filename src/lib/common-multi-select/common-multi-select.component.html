@@ -1,0 +1,51 @@
+<div (click)="toggleList(false)">
+  <div style="width: 'fit-content';">
+    <button>
+      <div style="overflow-x: scroll;" *ngIf="listOfItemNames && listOfItemNames.length; else showDefault">
+        {{
+          listOfItemNames
+            .toString()
+            .split(',')
+            .join(', ')
+        }}
+      </div>
+      <ng-template #showDefault>
+        <div>Choose</div>
+      </ng-template>
+    </button>
+    <i
+      (click)="isListDisplayed = !isListDisplayed"
+      style="color: 'gray'; position: 'relative'; right: '30px';"
+      class="cursor-pointer fa fa-chevron-down"
+    ></i>
+
+    <div *ngIf="isListDisplayed" class="list-container" style="display: 'flex'; flex-direction: 'column'">
+      <div style="display: 'flex'; align-items: 'center';">
+        <input type="checkbox" style="margin-right: '10px';" />
+        <input
+          name="searchBox"
+          #searchBox
+          type="text"
+          (input)="onSearchFilter(searchBox.value)"
+          style="padding: '0.3rem'; margin-right: '20px';"
+        />
+        <i (click)="toggleList(false)" class=" cursor-pointer fa fa-times" style="color:'gray';"></i>
+      </div>
+
+      <ul>
+        <li
+          *ngFor="let item of listOfValues; let i = index"
+          [class]="currentIndex.includes(i) ? 'drop-down' : 'list'"
+          (click)="addRemoveData(item, i)"
+          style="display: 'flex'; align-items: 'center'; cursor: 'pointer'"
+        >
+          <div style="text-align: 'center';" class="check-box">
+            <i [class]="currentIndex.includes(i) ? 'fa fa-check black' : ''"></i>
+          </div>
+          <div>{{ item.label }}</div>
+        </li>
+      </ul>
+    </div>
+    <ng-template #showNothing></ng-template>
+  </div>
+</div>
