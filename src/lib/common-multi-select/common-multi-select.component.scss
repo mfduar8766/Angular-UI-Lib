@@ -1,0 +1,100 @@
+button {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: gray;
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  width: 200px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+input[type='checkbox'] {
+  -webkit-appearance:none;
+  width:25px;
+  height:25px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+}
+
+.check-box {
+  -webkit-appearance:none;
+  width:25px;
+  height:25px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+  margin-right: 10px;
+  margin-bottom: 0.2rem;
+}
+
+.black {
+  color: black
+}
+
+.list-container {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  background: white;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.list {
+  list-style: none;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list-disabled {
+  color: gray;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list:hover {
+  background-color: #DDDD;
+  cursor: pointer;
+}
+
+.drop-down {
+  background-color: #007ad9;
+  color: white;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.drop-down:hover {
+  cursor: pointer;
+}
+
+.primary {
+  border-color: var(--primary);
+  color: var(--primary);
+
+  &:hover,
+  &:active {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+.clear {
+  border: none;
+  color: black;
+}
