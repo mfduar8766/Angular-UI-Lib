@@ -9,3 +9,4 @@ export * from './common-reactive-form/common-reactive-form.module';
 export * from './common-dropdown/common-dropdown.module';
 export * from './common-multi-select/common-multi-select.module';
 export * from './common-split-button/common-split-button.module';
+export * from './common-select/common-select.module';

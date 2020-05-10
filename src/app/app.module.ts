@@ -14,7 +14,8 @@ import {
   DynamicFormModule,
   CommonDropdownModule,
   CommonMultiSelectModule,
-  CommonSplitButtonModule
+  CommonSplitButtonModule,
+  CommonSelectModule
 } from 'src/lib/public_api';
 import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
@@ -29,6 +30,7 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     CommonModalModule,
     CommonMultiSelectModule,
     CommonSearchModule,
+    CommonSelectModule,
     CommonSplitButtonModule,
     CommonTabModule,
     CommonTableModule,

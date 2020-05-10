@@ -10,14 +10,14 @@ interface SplitButtonInterface {
 @Component({
   selector: 'common-split-button',
   template: `
-    <div (click)="isListDisplayed=!isListDisplayed" appCommonHoverDirective (closeList)="toggleList($event)">
+    <div (click)="toggleList()" appCommonHoverDirective (closeList)="toggleList()">
       <div style="width: 'fit-content';">
         <i *ngIf="showIcon" [class]="icon" style="color: 'white'; position: 'relative'; left: '30px';"></i>
         <button [ngStyle]="{ 'background-color': backgroundColor }" [type]="buttonType">
           {{ buttonText }}
         </button>
         <i
-          (click)="isListDisplayed=!isListDisplayed"
+          (click)="toggleList()"
           style="color: 'white'; position: 'relative'; right: '30px';"
           class="cursor-pointer fa fa-chevron-down"
         ></i>
@@ -44,7 +44,7 @@ export class CommonSplitButtonComponent {
   @Input() listItems: SplitButtonInterface[];
   isListDisplayed = false;
 
-  toggleList(isListShown: boolean) {
-    this.isListDisplayed = isListShown;
+  toggleList() {
+    this.isListDisplayed = !this.isListDisplayed;
   }
 }
