@@ -3,9 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'common-card',
   template: `
-    <div class="card-container height-width">
+    <div [ngStyle]="heightWidth" class="card-container height-width">
       <div class="card">
-        <div *ngIf="showHeader" class="card-header">
+        <div [ngStyle]="headerStyles" *ngIf="showHeader" class="card-header">
           <ng-content select="div[role=header]"></ng-content>
         </div>
         <div class="card-body height-width">
@@ -17,11 +17,13 @@ import { Component, OnInit, Input } from '@angular/core';
       </div>
     </div>
   `,
-  styleUrls: ['./common-card-component.css']
+  styleUrls: ['./common-card-component.scss']
 })
 export class CommonCardComponent implements OnInit {
   @Input() showHeader: boolean;
   @Input() showFooter: boolean;
+  @Input() heightWidth = '';
+  @Input() headerStyles = '';
 
   constructor() {}
 

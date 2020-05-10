@@ -4,7 +4,7 @@ import { Directive, HostListener, Output, EventEmitter } from '@angular/core';
 export class HoverDirective {
   ismouseLeave = false;
   isClickEvent = false;
-  @Output() closeList: EventEmitter<boolean> = new EventEmitter();
+  @Output() closeList: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
 
@@ -21,7 +21,7 @@ export class HoverDirective {
   @HostListener('document:click')
   onClick() {
     if (this.ismouseLeave) {
-      this.closeList.emit(false);
+      this.closeList.emit();
     }
   }
 }

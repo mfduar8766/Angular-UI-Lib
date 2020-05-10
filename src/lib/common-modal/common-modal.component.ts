@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'common-modal',
@@ -19,18 +19,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
         <ng-content select="div[role=footer]"></ng-content>
       </footer>
     </div>
+    <div [class.is-overlay]="isModalOpen"></div>
   `,
-  styleUrls: ['./common-modal.component.css']
+  styleUrls: ['./common-modal.component.scss']
 })
-export class CommonModalComponent implements OnInit {
+export class CommonModalComponent {
   @Input() isModalOpen = false;
   @Input() headerText = 'Header Text';
   @Input() showHeader = true;
   @Input() showFooter = true;
   @Input() classProp = {};
   @Output() closeModal: EventEmitter<boolean> = new EventEmitter();
-
-  constructor() {}
-
-  ngOnInit() {}
 }

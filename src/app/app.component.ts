@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { mockData, tabContent, tableHeaders } from 'src/assets/testData';
+import { Component, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { mockData, tabContent, tableHeaders, states } from 'src/assets/testData';
 import { formConfig } from '../lib/common-reactive-form/Models /form-config';
 import { DynamicFormComponent } from '../lib/common-reactive-form/dynamic-form/dynamic-form.component';
 
@@ -8,7 +8,7 @@ import { DynamicFormComponent } from '../lib/common-reactive-form/dynamic-form/d
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements AfterViewInit, AfterViewChecked {
   @ViewChild(DynamicFormComponent) form: DynamicFormComponent;
   title = 'angularCommonComponents';
   isModalOpen = false;
@@ -16,6 +16,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   tableHeaders = tableHeaders;
   tabContent = tabContent;
   config = formConfig;
+  selectedValues: string[];
+  statesArray = states;
+  state = 'GA';
+  testMultiSelect;
   options = [
     { label: 'French', value: 'French' },
     { label: 'Asian', value: 'Asian' },
@@ -34,10 +38,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     console.log('SECOND');
   }
 
-  constructor() {}
-
-  ngOnInit() {}
-
   ngAfterViewInit() {
     this.form.changes.subscribe(change => {
       this.form.controls.forEach(control => {
@@ -48,6 +48,11 @@ export class AppComponent implements OnInit, AfterViewInit {
         }
       });
     });
+  }
+
+  ngAfterViewChecked() {
+    // console.log('SELECTED STATE', this.state);
+    // console.log('TEST SELECT', this.testMultiSelect);
   }
 
   submit(value: { [name: string]: any }) {
@@ -88,5 +93,17 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   getClickedItem(value) {
     console.log('CLICKED ITEM', value);
+  }
+
+  submitTestForm(value) {
+    console.log('FORM', value);
+  }
+
+  stateForm(value) {
+    console.log('STATE FORM VALUE', value);
+  }
+
+  multiSelectForm(value) {
+    console.log('MULTI SELECT FORM VALUE', value);
   }
 }

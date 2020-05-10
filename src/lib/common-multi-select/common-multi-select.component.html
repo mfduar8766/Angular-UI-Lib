@@ -1,51 +1,54 @@
-<div (click)="toggleList(false)">
-  <div style="width: 'fit-content';">
-    <button>
-      <div style="overflow-x: scroll;" *ngIf="listOfItemNames && listOfItemNames.length; else showDefault">
-        {{
-          listOfItemNames
-            .toString()
-            .split(',')
-            .join(', ')
-        }}
-      </div>
-      <ng-template #showDefault>
-        <div>Choose</div>
-      </ng-template>
+<ng-container>
+  <ng-container *ngIf="!selectedItems.length; else showSelected">
+    <button (click)="toggleList()">
+      <div>Choose</div>
     </button>
     <i
-      (click)="isListDisplayed = !isListDisplayed"
-      style="color: 'gray'; position: 'relative'; right: '30px';"
+      (click)="toggleList()"
+      style="color: gray; position: relative; right: 30px;"
       class="cursor-pointer fa fa-chevron-down"
     ></i>
-
-    <div *ngIf="isListDisplayed" class="list-container" style="display: 'flex'; flex-direction: 'column'">
-      <div style="display: 'flex'; align-items: 'center';">
-        <input type="checkbox" style="margin-right: '10px';" />
-        <input
-          name="searchBox"
-          #searchBox
-          type="text"
-          (input)="onSearchFilter(searchBox.value)"
-          style="padding: '0.3rem'; margin-right: '20px';"
-        />
-        <i (click)="toggleList(false)" class=" cursor-pointer fa fa-times" style="color:'gray';"></i>
-      </div>
-
-      <ul>
-        <li
-          *ngFor="let item of listOfValues; let i = index"
-          [class]="currentIndex.includes(i) ? 'drop-down' : 'list'"
-          (click)="addRemoveData(item, i)"
-          style="display: 'flex'; align-items: 'center'; cursor: 'pointer'"
-        >
-          <div style="text-align: 'center';" class="check-box">
-            <i [class]="currentIndex.includes(i) ? 'fa fa-check black' : ''"></i>
-          </div>
-          <div>{{ item.label }}</div>
-        </li>
-      </ul>
+  </ng-container>
+  <ng-template #showSelected>
+    <div class="list-of-selected-itens">
+      <ng-container *ngFor="let item of selectedItems; let i = index">
+        <div style="border: 1px solid gray; width: 70px; height: auto; margin-right: 5px; padding: 0.2rem 0.2rem;">
+          <i
+            (click)="addRemoveData(item, i)"
+            class="fa fa-times cursor-pointer"
+            style="color: gray; position: relative;"
+          ></i>
+          {{ item.label }}
+        </div>
+      </ng-container>
     </div>
-    <ng-template #showNothing></ng-template>
+  </ng-template>
+  <div *ngIf="isListDisplayed" class="list-container" style="display: flex; flex-direction: column">
+    <div style="display: flex; align-items: center;">
+      <div (click)="onCheckboxChecked(!selectAll)" style="text-align: center;" class="check-box">
+        <i [class]="selectAll ? 'fa fa-check black' : ''"></i>
+      </div>
+      <input
+        name="searchBox"
+        #searchBox
+        type="text"
+        (input)="onSearchFilter(searchBox.value)"
+        style="padding: 0.3rem; margin-right: 20px;"
+      />
+      <i (click)="toggleList()" class=" cursor-pointer fa fa-times" style="color:gray;"></i>
+    </div>
+    <ul [attr.name]="name">
+      <li
+        *ngFor="let item of listOfValues; let i = index"
+        [class]="currentIndex.includes(i) ? 'drop-down' : 'list'"
+        (click)="addRemoveData(item, i)"
+        style="display: flex; align-items: center; cursor: pointer"
+      >
+        <div style="text-align: center;" class="check-box">
+          <i [class]="currentIndex.includes(i) ? 'fa fa-check black' : ''"></i>
+        </div>
+        <div>{{ item.label }}</div>
+      </li>
+    </ul>
   </div>
-</div>
+</ng-container>

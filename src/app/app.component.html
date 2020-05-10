@@ -1,29 +1,67 @@
 <div style="display: flex; flex-direction: column; justify-content: center; width: 100%; height: 100%;">
-  <common-button [buttonText]="'Click Me'" (click)="getButtonClick()"></common-button>
-  <common-button
-    [buttonText]="'Open Modal'"
-    [backgroundColor]="'blue'"
-    (click)="isModalOpen = !isModalOpen"
-  ></common-button>
-  <hr />
-  <common-modal
-    [classProp]="{
-      height: '50%',
-      width: '50%',
-      color: 'black'
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
     }"
-    [isModalOpen]="isModalOpen"
-    (closeModal)="setCloseModal($event)"
+    [showHeader]="'true'"
   >
-    <div role="content">MODAL</div>
-    <div role="footer">FOTTER</div>
-  </common-modal>
-  <hr />
-  <common-card [showHeader]="'true'" [showFooter]="'true'">
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Button
+    </div>
+    <common-button [buttonText]="'Click Me'" (click)="getButtonClick()"></common-button>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+  >
     <div role="footer">My Footer</div>
-    <div style="height: fit-content; width: fit-content;" role="header">
-      HEADER
-      <!-- <img style="width: 100%;" src="https://source.unsplash.com/random" alt="random" /> -->
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Modal
+    </div>
+    <common-button
+      [buttonText]="'Open Modal'"
+      [backgroundColor]="'blue'"
+      (click)="isModalOpen = !isModalOpen"
+    ></common-button>
+    <common-modal
+      [classProp]="{
+        height: '50%',
+        width: '50%',
+        color: 'black'
+      }"
+      [isModalOpen]="isModalOpen"
+      (closeModal)="setCloseModal($event)"
+    >
+      <div role="content">MODAL</div>
+    </common-modal>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+    [showFooter]="'true'"
+  >
+    <div role="footer">My Footer</div>
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Card
     </div>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere atque aspernatur quasi quidem eum culpa soluta illum
     obcaecati doloremque labore, accusamus praesentium illo ut mollitia sint nesciunt et quis voluptatum consectetur
@@ -33,40 +71,224 @@
     adipisci est quasi totam quidem autem, suscipit doloribus sapiente facilis facere animi necessitatibus voluptatibus
     repellendus! Officia eaque iure eligendi optio soluta quos cum commodi debitis aspernatur.
   </common-card>
-  <hr />
-  <br /><br /><br />
-  <common-search
-    [searchArray]="tableData"
-    [showDropDown]="'true'"
-    [placeholder]="'Search agencies'"
-    (selectedSearchResult)="getSelectedResults($event)"
-    [stylesClass]="{
-      width: '50%'
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [heightWidth]="{
+      height: '300px'
     }"
-  ></common-search>
-  <br /><br /><br />
-  <common-tab [tabContent]="tabContent"></common-tab>
-  <br />
-  <app-dynamic-form [config]="config" (formSubmittedValues)="submit($event)"></app-dynamic-form>
-  <br />
-  <common-table
-    [dataKey]="'agencyId'"
-    [styleClass]="{ height: '100%', width: '50%' }"
-    [tableData]="tableData"
-    [columns]="tableHeaders"
-    [rowsperPage]="5"
-    [rowsPerPageOptions]="[5, 10, 15, 20]"
-    (editTableData)="editTableData($event)"
-  ></common-table>
-  <div style="margin-top: 5rem;"></div>
-  <common-dropdown [options]="options" (selectedValue)="getSelectedValue($event)"></common-dropdown>
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Auto Complete
+    </div>
+    <div style="height: 100%; width: 100%;">
+      <common-search
+        [searchArray]="tableData"
+        [showDropDown]="'true'"
+        [placeholder]="'Search agencies'"
+        (selectedSearchResult)="getSelectedResults($event)"
+        [stylesClass]="{
+          width: '100%'
+        }"
+      ></common-search>
+    </div>
+  </common-card>
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-  <common-multi-select [options]="options" (selectedValue)="getSelectedMultiValue($event)"></common-multi-select>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Tab
+    </div>
+    <common-tab [tabContent]="tabContent"></common-tab>
+  </common-card>
+
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-  <common-split-button
-    [listItems]="listItems"
-    [buttonText]="'Open Modal'"
-    [backgroundColor]="'green'"
-    (handleClick)="getClickedItem($event)"
-  ></common-split-button>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Reactive Form
+    </div>
+    <app-dynamic-form [config]="config" (formSubmittedValues)="submit($event)"></app-dynamic-form>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Table
+    </div>
+    <div style="height: 100%; width: 100%;">
+      <common-table
+        [dataKey]="'agencyId'"
+        [styleClass]="{ height: '100%', width: '50%' }"
+        [tableData]="tableData"
+        [columns]="tableHeaders"
+        [rowsperPage]="5"
+        [rowsPerPageOptions]="[5, 10, 15, 20]"
+        (editTableData)="editTableData($event)"
+      ></common-table>
+    </div>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Select
+    </div>
+    <common-dropdown [options]="options" (selectedValue)="getSelectedValue($event)"></common-dropdown>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <!-- <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Multi Select
+    </div>
+    <common-multi-select [options]="options" (selectedValues)="getSelectedMultiValue($event)"></common-multi-select>
+  </common-card> -->
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Split Button
+    </div>
+    <common-split-button
+      [listItems]="listItems"
+      [buttonText]="'Choose Action'"
+      [backgroundColor]="'green'"
+      (handleClick)="getClickedItem($event)"
+    ></common-split-button>
+  </common-card>
+
+  <div style="margin-top: 5rem; margin-bottom: 5rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Select
+    </div>
+    <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="submitTestForm(form.value)">
+      <common-select [stateList]="statesArray" name="state" ngModel #state="ngModel"></common-select>
+      <button type="submit">Submit State Form</button>
+    </form>
+    <!-- <common-select [stateList]="statesArray" name="state" [(ngModel)]="state"></common-select> -->
+  </common-card>
+
+  <div style="margin-top: 5rem; margin-bottom: 5rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Multi Select
+    </div>
+    <!-- <common-multi-select [options]="options" name="testMultiSelect" [(ngModel)]="testMultiSelect"></common-multi-select> -->
+    <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="multiSelectForm(form.value)">
+      <common-multi-select
+        [options]="options"
+        name="testMultiSelect"
+        #testMultiSelect="ngModel"
+        ngModel
+      ></common-multi-select>
+      <button type="submit">Submit Multi Select Form</button>
+    </form>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <!--<common-multi-select (selectedValues)="selectedValues = $event"></common-multi-select>
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+  <button type="submit">Submit</button> -->
 </div>

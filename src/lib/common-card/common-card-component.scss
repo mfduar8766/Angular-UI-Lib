@@ -1,7 +1,8 @@
 .card-container {
   height: 50%;
   width: 50%;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   overflow: hidden;
@@ -16,6 +17,8 @@
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .card-body {
