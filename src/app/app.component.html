@@ -259,21 +259,11 @@
       Common Multi Select
     </div>
     <pre>{{ multiSelectForm.value | json }}</pre>
-    <p>ngModel value: {{ langualges }}</p>
-    <form #multiSelectForm="ngForm">
-      <common-multi-select [options]="options" name="langualges" [(ngModel)]="langualges"></common-multi-select>
+    <p>ngModel value: {{ languages }}</p>
+    <form #multiSelectForm="ngForm" (ngSubmit)="getMultiSelectFormValues(multiSelectForm.value)">
+      <common-multi-select [options]="options" name="languages" [(ngModel)]="languages"></common-multi-select>
       <button type="submit">Submit Multi Select Form</button>
     </form>
-    <!-- <common-multi-select [options]="options" name="testMultiSelect" [(ngModel)]="testMultiSelect"></common-multi-select> -->
-    <!-- <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="multiSelectForm(form.value)">
-      <common-multi-select
-        [options]="options"
-        name="testMultiSelect"
-        #testMultiSelect="ngModel"
-        ngModel
-      ></common-multi-select>
-      <button type="submit">Submit Multi Select Form</button>
-    </form> -->
   </common-card>
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
@@ -310,27 +300,3 @@
     <p>Reactive Form Value: {{ outerCounterValue }}</p>
   </common-card>
 </div>
-
-<!--<common-multi-select (selectedValues)="selectedValues = $event"></common-multi-select>
-  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-  <button type="submit">Submit</button> -->
-
-<!-- <common-card
-    [headerStyles]="{
-      'background-color': 'blue',
-      color: 'white',
-      height: '30px',
-      'border-radius': '0.5rem'
-    }"
-    [heightWidth]="{
-      height: '20%',
-      width: '20%'
-    }"
-    [showHeader]="'true'"
-  >
-    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
-      Common Multi Select
-    </div>
-    <common-multi-select [options]="options" (selectedValues)="getSelectedMultiValue($event)"></common-multi-select>
-  </common-card> -->

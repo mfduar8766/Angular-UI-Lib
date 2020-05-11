@@ -20,7 +20,7 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   selectedValues: string[];
   statesArray = states;
   state = 'GA';
-  langualges = ['French', 'Korean', 'Italian'];
+  languages = ['French', 'Korean', 'Italian'];
   outerCounterValue = 5;
   counterReactiveForm: FormGroup;
   options = [
@@ -118,7 +118,7 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
     console.log('STATE FORM VALUE', value);
   }
 
-  multiSelectForm(value) {
+  getMultiSelectFormValues(value) {
     console.log('MULTI SELECT FORM VALUE', value);
   }
 
