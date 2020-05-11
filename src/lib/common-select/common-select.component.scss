@@ -1,0 +1,51 @@
+button {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: gray;
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  width: 200px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.list-container {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  background: white;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.list {
+  list-style: none;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list-disabled {
+  color: gray;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.list:hover {
+  background-color: #DDDD;
+  cursor: pointer;
+}

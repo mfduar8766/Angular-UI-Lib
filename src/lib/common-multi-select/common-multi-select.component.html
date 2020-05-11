@@ -1,5 +1,5 @@
 <ng-container>
-  <ng-container *ngIf="!selectedItems.length; else showSelected">
+  <ng-container *ngIf="!preSelectedOption.length; else showSelected">
     <button (click)="toggleList()">
       <div>Choose</div>
     </button>
@@ -11,21 +11,38 @@
   </ng-container>
   <ng-template #showSelected>
     <div class="list-of-selected-itens">
-      <ng-container *ngFor="let item of selectedItems; let i = index">
-        <div style="border: 1px solid gray; width: 70px; height: auto; margin-right: 5px; padding: 0.2rem 0.2rem;">
-          <i
-            (click)="addRemoveData(item, i)"
-            class="fa fa-times cursor-pointer"
-            style="color: gray; position: relative;"
-          ></i>
-          {{ item.label }}
+      <ng-container *ngIf="preSelectedOption.length >= 4; else showItems">
+        <div class="cursor-pointer" (click)="toggleList()" style="width: 250px;">
+          {{ preSelectedOption.length }} items selected
         </div>
+        <i
+          (click)="toggleList()"
+          style="color: gray; position: relative; right: -5px;"
+          class="cursor-pointer fa fa-chevron-down"
+        ></i>
       </ng-container>
+      <ng-template #showItems>
+        <div style="width: 200px;" *ngFor="let item of preSelectedOption; let i = index">
+          <div style="border: 1px solid gray; width: 70px; height: auto; margin-right: 3px; padding: 0.1rem 0.1rem;">
+            <i
+              (click)="addRemoveData({ label: item, value: item }, i)"
+              class="fa fa-times cursor-pointer"
+              style="color: gray; position: relative;"
+            ></i>
+            {{ item }}
+          </div>
+        </div>
+        <i
+          (click)="toggleList()"
+          style="color: gray; position: relative;;"
+          class="cursor-pointer fa fa-chevron-down"
+        ></i>
+      </ng-template>
     </div>
   </ng-template>
   <div *ngIf="isListDisplayed" class="list-container" style="display: flex; flex-direction: column">
-    <div style="display: flex; align-items: center;">
-      <div (click)="onCheckboxChecked(!selectAll)" style="text-align: center;" class="check-box">
+    <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+      <div style="margin-left: 5px;" (click)="onSelectAll(!selectAll)" style="text-align: center;" class="check-box">
         <i [class]="selectAll ? 'fa fa-check black' : ''"></i>
       </div>
       <input
@@ -33,19 +50,31 @@
         #searchBox
         type="text"
         (input)="onSearchFilter(searchBox.value)"
-        style="padding: 0.3rem; margin-right: 20px;"
+        style="padding: 0.3rem; margin-left: 5px; margin-right: 10px;"
       />
-      <i (click)="toggleList()" class=" cursor-pointer fa fa-times" style="color:gray;"></i>
+      <i (click)="clearSelectedItemsOnXclick()" class=" cursor-pointer fa fa-times" style="color:gray;"></i>
     </div>
-    <ul [attr.name]="name">
+    <ul>
       <li
         *ngFor="let item of listOfValues; let i = index"
-        [class]="currentIndex.includes(i) ? 'drop-down' : 'list'"
+        [class]="
+          currentIndex.includes(i) || preSelectedOption.includes(item.label) || preSelectedOption.includes(item.value)
+            ? 'drop-down'
+            : 'list'
+        "
         (click)="addRemoveData(item, i)"
         style="display: flex; align-items: center; cursor: pointer"
       >
         <div style="text-align: center;" class="check-box">
-          <i [class]="currentIndex.includes(i) ? 'fa fa-check black' : ''"></i>
+          <i
+            [class]="
+              currentIndex.includes(i) ||
+              preSelectedOption.includes(item.label) ||
+              preSelectedOption.includes(item.value)
+                ? 'fa fa-check black'
+                : ''
+            "
+          ></i>
         </div>
         <div>{{ item.label }}</div>
       </li>
