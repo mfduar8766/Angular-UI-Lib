@@ -1,0 +1,18 @@
+<ng-container>
+  <button (click)="toggleList()">
+    <ng-container *ngIf="selectedState; else showDefault">{{ selectedState }}</ng-container>
+    <ng-template #showDefault>Choose</ng-template>
+  </button>
+  <i
+    (click)="toggleList()"
+    style="color: gray; position: relative; right: 30px;"
+    class="cursor-pointer fa fa-chevron-down"
+  ></i>
+  <div *ngIf="isListDisplayed" class="list-container">
+    <ul>
+      <li (click)="setSelectedState(state.abbreviation)" class="list" *ngFor="let state of stateList">
+        {{ state.name }}
+      </li>
+    </ul>
+  </div>
+</ng-container>

@@ -1,8 +1,6 @@
 import {
   Component,
   Input,
-  Output,
-  EventEmitter,
   OnInit,
   ViewChild,
   ElementRef,
@@ -11,6 +9,11 @@ import {
   forwardRef
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+
+interface IOptions {
+  label: string;
+  value: string;
+}
 
 @Component({
   selector: 'common-multi-select',
@@ -25,23 +28,34 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
   ]
 })
 export class CommonMultiSelectComponent implements OnInit, AfterViewChecked, ControlValueAccessor {
-  @ViewChild('searchBox') searchBox: ElementRef;
-  @Input() options: [{ label: string; value: string }];
-  @Input() preSelectedOption: string[];
-  @Input() name;
-  @Output() selectedValues: EventEmitter<string[]> = new EventEmitter();
-  listOfValues: any[] = [];
+  @ViewChild('searchBox', { read: ElementRef }) searchBox: ElementRef;
+  @Input() options: IOptions[];
+  @Input() preSelectedOption: string[] = [];
+  listOfValues: IOptions[] = [];
   isListDisplayed = false;
-  selectedItems: any[] = [];
-  listOfSelectedItems: string[] = [];
+  selectedItems: IOptions[] = [];
   searchText = '';
   currentIndex = [];
   selectAll = false;
 
   constructor(private eRef: ElementRef) {}
 
-  onChange: any = () => {};
+  propagateChange = (_: any) => {};
   onTouched: any = () => {};
+
+  writeValue(value: any): void {
+    if (value !== undefined || value !== null) {
+      this.preSelectedOption = value;
+    }
+  }
+
+  registerOnChange(fn: any): void {
+    this.propagateChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
 
   @HostListener('document:click', ['$event'])
   clickout(event) {
@@ -56,28 +70,36 @@ export class CommonMultiSelectComponent implements OnInit, AfterViewChecked, Con
     this.listOfValues = this.options;
   }
 
+  checkForPrePopulatedValues() {
+    const matchedItems = [];
+    if (this.preSelectedOption && this.preSelectedOption.length) {
+      this.preSelectedOption.forEach(option => {
+        this.options.forEach(item => {
+          if (item.label === option) {
+            matchedItems.push({ label: option, value: item.value });
+          }
+        });
+      });
+      this.selectedItems = matchedItems;
+    }
+  }
+
   ngAfterViewChecked() {
+    this.checkForPrePopulatedValues();
     if (this.isListDisplayed) {
       this.searchBox.nativeElement.focus();
     }
   }
 
-  registerOnChange(fn) {
-    this.onChange = fn;
-  }
-
-  registerOnTouched(fn) {
-    this.onTouched = fn;
-  }
-
-  writeValue(value) {
-    if (value) {
-      this.preSelectedOption = value;
-    }
-  }
-
   toggleList() {
     this.isListDisplayed = !this.isListDisplayed;
+  }
+
+  clearSelectedItemsOnXclick() {
+    this.isListDisplayed = false;
+    this.selectedItems = [];
+    this.preSelectedOption = [];
+    this.propagateChange(this.preSelectedOption);
   }
 
   onSearchFilter(value) {
@@ -94,38 +116,49 @@ export class CommonMultiSelectComponent implements OnInit, AfterViewChecked, Con
     }
   }
 
-  onCheckboxChecked(event) {
+  callPropagateMethod(selectedItemsArray: any[] | IOptions[]) {
+    this.selectedItems = selectedItemsArray;
+    const listOfItems = this.selectedItems.map(item => item.label);
+    this.preSelectedOption = listOfItems;
+    this.propagateChange(this.preSelectedOption);
+  }
+
+  onSelectAll(event) {
     const isChecked = event;
     if (isChecked) {
       this.selectAll = true;
-      this.selectedItems = this.options;
+      this.callPropagateMethod(this.options);
     } else {
       this.selectAll = false;
-      this.selectedItems = [];
+      this.callPropagateMethod([]);
     }
   }
 
-  setOnChangeAndOnTouch(value) {
-    this.onChange(value);
-    this.onTouched();
+  addSelectedValues(data: IOptions, index: number) {
+    this.selectedItems.push(data);
+    this.currentIndex.push(index);
+    this.preSelectedOption = this.selectedItems.map(item => item.label);
+    this.propagateChange(this.preSelectedOption);
   }
 
-  addRemoveData(data, index: number) {
-    if (!this.selectedItems.includes(data)) {
-      this.selectedItems.push(data);
-      this.currentIndex.push(index);
-      this.listOfSelectedItems.push(data.value);
-      this.preSelectedOption = this.listOfSelectedItems;
-      // this.selectedValues.emit(this.listOfSelectedItems);
-      this.setOnChangeAndOnTouch(this.preSelectedOption);
-    } else if (this.selectedItems.includes(data)) {
-      this.selectedItems = this.selectedItems.filter(item => item.label !== data.label);
-      this.currentIndex = this.currentIndex.filter(i => i !== index);
-      this.listOfSelectedItems = this.listOfSelectedItems.filter(item => item !== data.value);
-      this.preSelectedOption = this.listOfSelectedItems;
-      this.setOnChangeAndOnTouch(this.preSelectedOption);
-      // this.selectedValues.emit(this.listOfSelectedItems);
+  removeSelectedValues(data: IOptions, index: number) {
+    this.selectedItems = this.selectedItems.filter(item => item.value !== data.value);
+    this.currentIndex = this.currentIndex.filter(i => i !== index);
+    this.preSelectedOption = this.selectedItems.map(item => item.label);
+    this.propagateChange(this.preSelectedOption);
+  }
+
+  addRemoveData(data: IOptions, index: number) {
+    if (
+      this.selectedItems.filter(item => item.value === data.value).length > 0 ||
+      this.selectedItems.filter(item => item.label === data.label).length > 0
+    ) {
+      this.removeSelectedValues(data, index);
+    } else if (
+      !(this.selectedItems.filter(item => item.value === data.value).length > 0) ||
+      !(this.selectedItems.filter(item => item.label === data.label).length > 0)
+    ) {
+      this.addSelectedValues(data, index);
     }
   }
 }
-// <p-multiSelect (onChange)="selectedValue.emit($event.value)" [options]="options" [(ngModel)]="preSelectedOption"></p-multiSelect>

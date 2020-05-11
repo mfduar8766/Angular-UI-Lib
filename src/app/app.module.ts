@@ -15,7 +15,8 @@ import {
   CommonDropdownModule,
   CommonMultiSelectModule,
   CommonSplitButtonModule,
-  CommonSelectModule
+  CommonSelectModule,
+  CommonCounterModule
 } from 'src/lib/public_api';
 import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
@@ -35,10 +36,11 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     CommonTabModule,
     CommonTableModule,
     DynamicFormModule,
-    FormsModule, ReactiveFormsModule,
-    PrimeNgModule
+    FormsModule, 
+    ReactiveFormsModule,
+    PrimeNgModule,
+    CommonCounterModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

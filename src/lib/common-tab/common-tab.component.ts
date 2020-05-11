@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'common-tab',
   templateUrl: './common-tab.component.html',
-  styleUrls: ['./common-tab.component.css']
+  styleUrls: ['./common-tab.component.scss']
 })
 export class CommonTabComponent implements OnInit {
   @Input() tabContent;

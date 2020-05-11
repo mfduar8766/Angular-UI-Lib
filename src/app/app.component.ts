@@ -1,14 +1,15 @@
-import { Component, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, AfterViewChecked, OnInit } from '@angular/core';
 import { mockData, tabContent, tableHeaders, states } from 'src/assets/testData';
 import { formConfig } from '../lib/common-reactive-form/Models /form-config';
 import { DynamicFormComponent } from '../lib/common-reactive-form/dynamic-form/dynamic-form.component';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit, AfterViewChecked {
+export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   @ViewChild(DynamicFormComponent) form: DynamicFormComponent;
   title = 'angularCommonComponents';
   isModalOpen = false;
@@ -19,10 +20,16 @@ export class AppComponent implements AfterViewInit, AfterViewChecked {
   selectedValues: string[];
   statesArray = states;
   state = 'GA';
-  testMultiSelect;
+  langualges = ['French', 'Korean', 'Italian'];
+  outerCounterValue = 5;
+  counterReactiveForm: FormGroup;
   options = [
     { label: 'French', value: 'French' },
-    { label: 'Asian', value: 'Asian' },
+    { label: 'Korean', value: 'Korean' },
+    { label: 'German', value: 'German' },
+    { label: 'Japanese', value: 'Japanese' },
+    { label: 'English', value: 'English' },
+    { label: 'Dutch', value: 'Dutch' },
     { label: 'Italian', value: 'Italian' }
   ];
   listItems = [
@@ -30,12 +37,12 @@ export class AppComponent implements AfterViewInit, AfterViewChecked {
     { label: 'Call Second', command: () => this.callSecond() }
   ];
 
-  callFirst() {
-    console.log('FIRST');
-  }
+  constructor(private formBuilder: FormBuilder) {}
 
-  callSecond() {
-    console.log('SECOND');
+  ngOnInit() {
+    this.counterReactiveForm = this.formBuilder.group({
+      counter: 5
+    });
   }
 
   ngAfterViewInit() {
@@ -53,6 +60,14 @@ export class AppComponent implements AfterViewInit, AfterViewChecked {
   ngAfterViewChecked() {
     // console.log('SELECTED STATE', this.state);
     // console.log('TEST SELECT', this.testMultiSelect);
+  }
+
+  callFirst() {
+    console.log('FIRST');
+  }
+
+  callSecond() {
+    console.log('SECOND');
   }
 
   submit(value: { [name: string]: any }) {
@@ -105,5 +120,13 @@ export class AppComponent implements AfterViewInit, AfterViewChecked {
 
   multiSelectForm(value) {
     console.log('MULTI SELECT FORM VALUE', value);
+  }
+
+  getCounterValue(value) {
+    console.log('COUNTER VALUE', value);
+  }
+
+  setReactiveFormValue() {
+    this.outerCounterValue = this.counterReactiveForm.value.counter;
   }
 }

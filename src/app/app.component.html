@@ -185,27 +185,6 @@
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
 
-  <!-- <common-card
-    [headerStyles]="{
-      'background-color': 'blue',
-      color: 'white',
-      height: '30px',
-      'border-radius': '0.5rem'
-    }"
-    [heightWidth]="{
-      height: '20%',
-      width: '20%'
-    }"
-    [showHeader]="'true'"
-  >
-    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
-      Common Multi Select
-    </div>
-    <common-multi-select [options]="options" (selectedValues)="getSelectedMultiValue($event)"></common-multi-select>
-  </common-card> -->
-
-  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-
   <common-card
     [headerStyles]="{
       'background-color': 'blue',
@@ -248,10 +227,16 @@
     <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
       Common Select
     </div>
-    <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="submitTestForm(form.value)">
-      <common-select [stateList]="statesArray" name="state" ngModel #state="ngModel"></common-select>
+    <pre>{{ form.value | json }}</pre>
+    <p>ngModel value: {{ state }}</p>
+    <form #form="ngForm">
+      <common-select [stateList]="statesArray" name="state" [(ngModel)]="state"></common-select>
       <button type="submit">Submit State Form</button>
     </form>
+    <!-- <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="submitTestForm(form.value)">
+      <common-select [stateList]="statesArray" name="state" ngModel #state="ngModel"></common-select>
+      <button type="submit">Submit State Form</button>
+    </form> -->
     <!-- <common-select [stateList]="statesArray" name="state" [(ngModel)]="state"></common-select> -->
   </common-card>
 
@@ -273,8 +258,14 @@
     <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
       Common Multi Select
     </div>
+    <pre>{{ multiSelectForm.value | json }}</pre>
+    <p>ngModel value: {{ langualges }}</p>
+    <form #multiSelectForm="ngForm">
+      <common-multi-select [options]="options" name="langualges" [(ngModel)]="langualges"></common-multi-select>
+      <button type="submit">Submit Multi Select Form</button>
+    </form>
     <!-- <common-multi-select [options]="options" name="testMultiSelect" [(ngModel)]="testMultiSelect"></common-multi-select> -->
-    <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="multiSelectForm(form.value)">
+    <!-- <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="multiSelectForm(form.value)">
       <common-multi-select
         [options]="options"
         name="testMultiSelect"
@@ -282,13 +273,64 @@
         ngModel
       ></common-multi-select>
       <button type="submit">Submit Multi Select Form</button>
-    </form>
+    </form> -->
   </common-card>
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
 
-  <!--<common-multi-select (selectedValues)="selectedValues = $event"></common-multi-select>
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Counter Custom Form Control
+    </div>
+    <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="getCounterValue(form.value)">
+      <common-counter name="counter" [(ngModel)]="outerCounterValue"></common-counter>
+      <button type="submit">Submit</button>
+    </form>
+    <pre>{{ form.value | json }}</pre>
+    <p>ngModel value: {{ outerCounterValue }}</p>
+
+    <h4>Reactive Form</h4>
+    <form [formGroup]="counterReactiveForm" (ngSubmit)="setReactiveFormValue()">
+      <common-counter formControlName="counter"></common-counter>
+      <button type="submit">Submit</button>
+    </form>
+    <pre>{{ form.value | json }}</pre>
+    <p>Reactive Form Value: {{ outerCounterValue }}</p>
+  </common-card>
+</div>
+
+<!--<common-multi-select (selectedValues)="selectedValues = $event"></common-multi-select>
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
   <button type="submit">Submit</button> -->
-</div>
+
+<!-- <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Multi Select
+    </div>
+    <common-multi-select [options]="options" (selectedValues)="getSelectedMultiValue($event)"></common-multi-select>
+  </common-card> -->

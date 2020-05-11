@@ -4,15 +4,8 @@ import { State } from 'src/assets/testData';
 
 @Component({
   selector: 'common-select',
-  template: `
-    <ng-container>
-      <select [name]="name" [(ngModel)]="value">
-        <option *ngFor="let state of stateList" [value]="state.abbreviation">
-          {{ state.name }}
-        </option>
-      </select>
-    </ng-container>
-  `,
+  templateUrl: './common-select.component.html',
+  styleUrls: ['./common-select.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -23,33 +16,38 @@ import { State } from 'src/assets/testData';
 })
 export class CommonSelectComponent implements ControlValueAccessor {
   @Input() stateList: State[];
-  @Input() name: string;
-  @Input('value') val: string;
+  @Input() selectedState = '';
+  isListDisplayed = false;
+  disabled = false;
 
-  onChange: any = () => {};
   onTouched: any = () => {};
 
-  get value() {
-    return this.val;
+  propagateChange = (_: any) => {};
+
+  writeValue(value: any): void {
+    if (value !== undefined) {
+      this.selectedState = value;
+    }
   }
 
-  set value(val) {
-    this.val = val;
-    this.onChange(val);
-    this.onTouched();
+  registerOnChange(fn: any): void {
+    this.propagateChange = fn;
   }
 
-  registerOnChange(fn) {
-    this.onChange = fn;
-  }
-
-  registerOnTouched(fn) {
+  registerOnTouched(fn: any): void {
     this.onTouched = fn;
   }
 
-  writeValue(value) {
-    if (value) {
-      this.value = value;
-    }
+  setDisabledState?(isDisabled: boolean): void {
+    this.disabled = isDisabled;
+  }
+
+  setSelectedState(state: string) {
+    this.selectedState = state;
+    this.propagateChange(this.selectedState);
+  }
+
+  toggleList() {
+    this.isListDisplayed = !this.isListDisplayed;
   }
 }
