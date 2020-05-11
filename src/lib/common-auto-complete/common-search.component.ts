@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'common-search',
   templateUrl: './common-search.component.html',
-  styleUrls: ['./common-search.component.css']
+  styleUrls: ['./common-search.component.scss']
 })
 export class CommonSearchComponent {
   @Input() isDisabled = false;

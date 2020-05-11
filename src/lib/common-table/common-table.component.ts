@@ -5,7 +5,7 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'common-table',
   templateUrl: './common-table.component.html',
-  styleUrls: ['./common-table.component.css']
+  styleUrls: ['./common-table.component.scss']
 })
 export class CommonTableComponent implements OnInit {
   @Input() dataKey: string;
