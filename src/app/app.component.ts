@@ -3,6 +3,7 @@ import { mockData, tabContent, tableHeaders, states } from 'src/assets/testData'
 import { formConfig } from '../lib/common-reactive-form/Models /form-config';
 import { DynamicFormComponent } from '../lib/common-reactive-form/dynamic-form/dynamic-form.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { LocalStorageService } from 'src/lib/services/localStorage/localStorage.service';
 
 @Component({
   selector: 'app-root',
@@ -127,5 +128,18 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
   setReactiveFormValue() {
     this.outerCounterValue = this.counterReactiveForm.value.counter;
+  }
+
+  setLocalStorage() {
+    LocalStorageService.setLocalStorage('tet', { name: 'bob', age: 21 });
+  }
+
+  getLocalStorage() {
+    console.log(LocalStorageService.getLocalStorage('tet'));
+  }
+
+  removeLocalStorage() {
+    LocalStorageService.removeItem('tet');
+    console.log(LocalStorageService.getLocalStorage('tet'));
   }
 }
