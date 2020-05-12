@@ -36,7 +36,7 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     CommonTabModule,
     CommonTableModule,
     DynamicFormModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     PrimeNgModule,
     CommonCounterModule

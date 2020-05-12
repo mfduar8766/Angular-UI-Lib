@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Field } from '../../Models /field.interface';
 import { FieldConfig } from '../../Models /fieldConfig.interface';
@@ -8,16 +8,8 @@ import { FieldConfig } from '../../Models /fieldConfig.interface';
   template: `
     <div class="dynamic-field form-select" [formGroup]="group">
       <label>{{ config.label }}</label>
-      <p-dropdown
-        [formControlName]="config.name"
-        [options]="config.options"
-      ></p-dropdown>
-      <ng-container
-        *ngIf="
-          group.controls[this.config.name].touched &&
-          group.controls[this.config.name].invalid
-        "
-      >
+      <p-dropdown [formControlName]="config.name" [options]="config.options"></p-dropdown>
+      <ng-container *ngIf="group.controls[this.config.name].touched && group.controls[this.config.name].invalid">
         <ng-container *ngFor="let validation of config.validations">
           <div *ngIf="group.get(config.name).hasError(validation.name)">
             {{ validation.message }}
@@ -25,7 +17,7 @@ import { FieldConfig } from '../../Models /fieldConfig.interface';
         </ng-container>
       </ng-container>
     </div>
-  `,
+  `
 })
 export class FormSelectComponent implements Field {
   config: FieldConfig;
