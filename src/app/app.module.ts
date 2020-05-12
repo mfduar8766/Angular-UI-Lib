@@ -16,7 +16,8 @@ import {
   CommonSplitButtonModule,
   CommonSelectModule,
   CommonCounterModule,
-  LocalStorageModule
+  LocalStorageModule,
+  CommonSliderModule
 } from 'src/lib/public_api';
 import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
@@ -38,7 +39,8 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     FormsModule,
     ReactiveFormsModule,
     PrimeNgModule,
-    CommonCounterModule
+    CommonCounterModule,
+    CommonSliderModule
   ],
   providers: [LocalStorageModule],
   bootstrap: [AppComponent]
