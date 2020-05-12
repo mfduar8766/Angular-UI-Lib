@@ -10,3 +10,5 @@ export * from './common-multi-select/common-multi-select.module';
 export * from './common-split-button/common-split-button.module';
 export * from './common-select/common-select.module';
 export * from './counter-componenet/counter.component.module';
+export * from './services/localStorage/localStorage.module';
+export * from './common-slider/common-slider.module';

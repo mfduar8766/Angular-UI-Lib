@@ -9,6 +9,27 @@
     [showHeader]="'true'"
   >
     <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Local Storage Service
+    </div>
+    <div style="display: flex;">
+      <common-button [buttonText]="'Set Local Storage'" (click)="setLocalStorage()"></common-button>
+      <common-button [buttonText]="'Get Local Storage'" (click)="getLocalStorage()"></common-button>
+      <common-button [buttonText]="'Remove Local Storage'" (click)="removeLocalStorage()"></common-button>
+    </div>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
       Common Button
     </div>
     <common-button [buttonText]="'Click Me'" (click)="getButtonClick()"></common-button>
@@ -277,5 +298,26 @@
     </form>
     <pre>{{ form.value | json }}</pre>
     <p>Reactive Form Value: {{ outerCounterValue }}</p>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '20%',
+      width: '20%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Slider
+    </div>
+    <common-slider></common-slider>
   </common-card>
 </div>
