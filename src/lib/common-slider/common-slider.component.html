@@ -1,0 +1,13 @@
+<div style="display: flex; flex-direction: column; width: 100%; height: 100%;">
+  <div>{{ sliderLabel }}: {{ rangeValue }}</div>
+  <input
+    [disabled]="isDisabled"
+    class="slider"
+    pInputText
+    type="range"
+    [min]="minMaxRange[0]"
+    [max]="minMaxRange[1]"
+    [(ngModel)]="rangeValue"
+    (ngModelChange)="getRange.emit($event)"
+  />
+</div>
