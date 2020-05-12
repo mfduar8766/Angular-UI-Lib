@@ -15,7 +15,8 @@ import {
   CommonMultiSelectModule,
   CommonSplitButtonModule,
   CommonSelectModule,
-  CommonCounterModule
+  CommonCounterModule,
+  LocalStorageModule
 } from 'src/lib/public_api';
 import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
@@ -39,6 +40,7 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     PrimeNgModule,
     CommonCounterModule
   ],
+  providers: [LocalStorageModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
