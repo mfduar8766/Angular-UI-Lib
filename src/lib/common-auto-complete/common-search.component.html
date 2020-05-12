@@ -14,17 +14,17 @@
       />
     </div>
     <div *ngIf="searchQuery.value.length > 0" class="position-relative ui-g-12">
-        <ul [ngStyle]="stylesClass" class="cursor-pointer search-results">
-          <li
-            (click)="selectedSearchResult.emit(value)"
-            class="no-bullets list-items"
-            style="text-transform: capitalize;"
-            *ngFor="let value of searchResults; let i = index"
-            :key="i"
-          >
-            {{ value.field }}
-          </li>
-        </ul>
+      <ul [ngStyle]="stylesClass" class="cursor-pointer list-container">
+        <li
+          (click)="selectedSearchResult.emit(value)"
+          class="no-bullets list"
+          style="text-transform: capitalize;"
+          *ngFor="let value of searchResults; let i = index"
+          :key="i"
+        >
+          {{ value.field }}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
