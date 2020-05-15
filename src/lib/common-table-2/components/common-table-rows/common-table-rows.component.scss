@@ -1,0 +1,33 @@
+.table-container {
+  height: 100%;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+th {
+  text-align: left;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+tr {
+  text-align: left;
+  padding: 1rem;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+td {
+  text-align: left;
+  padding: 1rem;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  // border-bottom: 1px solid black;
+}

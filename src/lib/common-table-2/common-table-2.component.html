@@ -1,0 +1,71 @@
+<table class="table-container">
+  <tr>
+    <th>
+      <input (change)="toggleSelectAll($event)" class="cursor-pointer" type="checkbox" name="tabLeCheckBox" />
+    </th>
+    <th *ngFor="let headers of tableHeaders" :key="headers.name">
+      <span (click)="handleSort(headers.prop)" class="cursor-pointer">
+        <i
+          *ngIf="selectedHeader === headers.prop; else showDefault"
+          [class]="
+            sortDirection === 'ASC'
+              ? 'cursor-pointer fa fa-chevron-up'
+              : sortDirection === 'DESC'
+              ? 'cursor-pointer fa fa-chevron-down'
+              : ''
+          "
+        ></i>
+        <ng-template #showDefault>
+          <i
+            *ngIf="headers.prop === tableHeaders[0].prop"
+            [class]="
+              sortDirection === 'ASC'
+                ? 'cursor-pointer fa fa-chevron-up'
+                : sortDirection === 'DESC'
+                ? 'cursor-pointer fa fa-chevron-down'
+                : ''
+            "
+          ></i>
+        </ng-template>
+        {{ headers.name }}
+      </span>
+    </th>
+    <th></th>
+  </tr>
+  <tr
+    (click)="getRowData(data, i)"
+    [class]="selectedRowIndex.includes(i) || isSelectAll ? 'active' : ''"
+    *ngFor="let data of tableData; let i = index"
+    :key="dataKey"
+  >
+    <td>
+      <input [class]="isSelectAll ? 'all-selected' : ''" class="cursor-pointer" type="checkbox" name="tabLeCheckBox" />
+    </td>
+    <td *ngFor="let headers of tableHeaders" :key="headers.name">
+      {{ data[headers.prop] }}
+    </td>
+    <td>
+      <div style="display: flex; justify-content: space-around;">
+        <i (click)="getDataToEdit(data)" class="cursor-pointer edit-icon fa fa-edit"></i>
+        <i (click)="getDataToDelete(data)" class="cursor-pointer trash-icon fa fa-trash"></i>
+      </div>
+    </td>
+  </tr>
+  <div class="footer">
+    <common-select [options]="numberOfRowsToDisplay" name="tableRows" [(ngModel)]="rowsPerPage"></common-select>
+    <div
+      style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1rem; padding: 1rem; position: relative; left: 300%;"
+    >
+      <div
+        style="width: 100px; color: rgba(0,0,0,.26);
+      "
+      >
+        {{ page }} - {{ rowsPerPage }} of {{ data.length }}
+      </div>
+      <i style="font-size: 1.5rem; margin-right: 1rem;" class="fa fa-angle-double-left"></i>
+      <i (click)="previousPage()" style="font-size: 1.5rem; margin-right: 1rem;" class="fa fa-angle-left"></i>
+      <i (click)="nextPage()" style="font-size: 1.5rem; margin-right: 1rem;" class="fa fa-angle-right"></i>
+      <i style="font-size: 1.5rem;" class="fa fa-angle-double-right"></i>
+    </div>
+  </div>
+</table>

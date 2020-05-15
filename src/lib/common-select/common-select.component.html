@@ -1,6 +1,6 @@
 <ng-container>
   <button (click)="toggleList()">
-    <ng-container *ngIf="selectedState; else showDefault">{{ selectedState }}</ng-container>
+    <ng-container *ngIf="selectedOption; else showDefault">{{ selectedOption }}</ng-container>
     <ng-template #showDefault>Choose</ng-template>
   </button>
   <i
@@ -10,8 +10,8 @@
   ></i>
   <div *ngIf="isListDisplayed" class="list-container">
     <ul>
-      <li (click)="setSelectedState(state.abbreviation)" class="list" *ngFor="let state of stateList">
-        {{ state.name }}
+      <li (click)="setOption(option)" class="list" *ngFor="let option of options">
+        {{ option }}
       </li>
     </ul>
   </div>

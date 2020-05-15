@@ -1472,6 +1472,68 @@ export interface State {
   abbreviation: string;
 }
 
+export const STATES = [
+  'Alabama',
+  'Alaska',
+  'American Samoa',
+  'Arizona',
+  'Arkansas',
+  'California',
+  'Colorado',
+  'Connecticut',
+  'Delaware',
+  'District of Columbia',
+  'Federated States of Micronesia',
+  'Florida',
+  'Georgia',
+  'Guam',
+  'Hawaii',
+  'Idaho',
+  'Illinois',
+  'Indiana',
+  'Iowa',
+  'Kansas',
+  'Kentucky',
+  'Louisiana',
+  'Maine',
+  'Marshall Islands',
+  'Maryland',
+  'Massachusetts',
+  'Michigan',
+  'Minnesota',
+  'Mississippi',
+  'Missouri',
+  'Montana',
+  'Nebraska',
+  'Nevada',
+  'New Hampshire',
+  'New Jersey',
+  'New Mexico',
+  'New York',
+  'North Carolina',
+  'North Dakota',
+  'Northern Mariana Islands',
+  'Ohio',
+  'Oklahoma',
+  'Oregon',
+  'Palau',
+  'Pennsylvania',
+  'Puerto Rico',
+  'Rhode Island',
+  'South Carolina',
+  'South Dakota',
+  'Tennessee',
+  'Texas',
+  'Utah',
+  'Vermont',
+  'Virgin Island',
+  'Virginia',
+  'Washington',
+  'West Virginia',
+  'Wisconsin',
+  'Wyoming'
+];
+
 export const states: State[] = [
   {
     name: 'Alabama',
@@ -1709,4 +1771,47 @@ export const states: State[] = [
     name: 'Wyoming',
     abbreviation: 'WY'
   }
+];
+
+export const tableHeaders2 = [
+  {
+    id: 0,
+    name: 'Agency Id',
+    prop: 'agencyId'
+  },
+  {
+    id: 1,
+    name: 'Agency Name',
+    prop: 'agencyName'
+  },
+  {
+    id: 2,
+    name: 'City',
+    prop: 'city'
+  },
+  {
+    id: 3,
+    name: 'State',
+    prop: 'state'
+  },
+  {
+    id: 4,
+    name: 'Address',
+    prop: 'address'
+  },
+  {
+    id: 5,
+    name: 'ZipCode',
+    prop: 'zipCode'
+  },
+  {
+    id: 6,
+    name: 'Agents',
+    prop: 'totalAgents'
+  }
+  // {
+  //   id: 7,
+  //   name: '',
+  //   prop: ''
+  // }
 ];

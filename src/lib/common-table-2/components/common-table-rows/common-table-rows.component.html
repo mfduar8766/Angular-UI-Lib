@@ -1,0 +1,24 @@
+<tr *ngFor="let data of tableData" :key="data.agencyId || data.agentId || data.id">
+  <td *ngFor="let headers of tableHeaders; let i = index" :key="headers.name">
+    {{ data[headers.prop] }}
+  </td>
+  <td>BBB</td>
+</tr>
+
+<!-- <div class="table-container" :key="dataKey">
+  <td class="cursor-pointer" (click)="handleRowCick(data)" *ngFor="let header of tableHeaders" :key="header.id">
+    {{ data[header.prop] }}
+  </td> -->
+<!-- <ng-container *ngIf="showEditOption === true">
+    <td></td>
+    <td>
+      <i (click)="handleEdit(data)" class="cursor-pointer edit-icon fa fa-edit"></i>
+    </td>
+  </ng-container>
+  <ng-container *ngIf="showDeleteOption === true">
+    <td></td>
+    <td>
+      <i (click)="handleDelete(data)" class="cursor-pointer trash-icon fa fa-trash"></i>
+    </td>
+  </ng-container> -->
+<!-- </div> -->

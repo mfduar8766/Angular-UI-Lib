@@ -1,5 +1,5 @@
 import { Component, ViewChild, AfterViewInit, AfterViewChecked, OnInit } from '@angular/core';
-import { mockData, tabContent, tableHeaders, states } from 'src/assets/testData';
+import { mockData, tabContent, tableHeaders, STATES, tableHeaders2 } from 'src/assets/testData';
 import { formConfig } from '../lib/common-reactive-form/Models /form-config';
 import { DynamicFormComponent } from '../lib/common-reactive-form/dynamic-form/dynamic-form.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -18,8 +18,9 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   tabContent = tabContent;
   config = formConfig;
   selectedValues: string[];
-  statesArray = states;
-  state = 'GA';
+  statesArray = STATES;
+  state = 'Georgia';
+  tableHeaders2 = tableHeaders2;
   languages = ['French', 'Korean', 'Italian'];
   outerCounterValue = 5;
   counterReactiveForm: FormGroup;
@@ -142,4 +143,16 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
     LocalStorageService.removeItem('tet');
     console.log(LocalStorageService.getLocalStorage('tet'));
   }
+
+  getRowData(data) {
+    // const agencyName = data.agencyName;
+    // const agencyId = data.agencyId.toString();
+    // const agents = data.agents;
+    // this.store.setRouteState({ agencyAgents: agents });
+    // this.router.navigate(['agencies/agents', agencyName, agencyId]);
+  }
+
+  getDataToEdit(data) {}
+
+  getDataToDelete(data) {}
 }
