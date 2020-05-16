@@ -96,7 +96,7 @@ export class CommonTableTwoComponent implements OnInit {
   }
 
   setTable(data: { page: number; tableData: any[]; data: any[]; tableDataOriginalState: any[]; rowsPerPage: number }) {
-    this.tableData = this.tableData;
+    this.tableData = data.tableData;
     this.page = data.page;
     this.rowsPerPage = data.rowsPerPage;
     this.tableDataOriginalState = data.tableDataOriginalState;
