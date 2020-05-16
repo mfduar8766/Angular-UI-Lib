@@ -70,10 +70,18 @@ export class CommonTableTwoComponent implements OnInit {
     }
   }
 
-  getRowData(data: any, index: number) {
+  checkIfSelectedItemsAreInArray(data: any): boolean {
     if (this.selectedRows.filter(item => item[this.dataKey] === data[this.dataKey]).length > 0) {
-      this.removeSelectedValues(data, index);
+      return true;
     } else if (!(this.selectedRows.filter(item => item[this.dataKey] === data[this.dataKey]).length > 0)) {
+      return false;
+    }
+  }
+
+  getRowData(data: any, index: number) {
+    if (this.checkIfSelectedItemsAreInArray(data)) {
+      this.removeSelectedValues(data, index);
+    } else if (!this.checkIfSelectedItemsAreInArray(data)) {
       this.addSelectedValues(data, index);
     }
   }

@@ -33,7 +33,8 @@
           {{ headers.name }}
         </span>
       </th>
-      <th></th>
+      <th *ngIf="showEditOption"></th>
+      <th *ngIf="showDeleteOption"></th>
     </tr>
     <tr
       (click)="getRowData(data, i)"
@@ -53,9 +54,13 @@
       <td *ngFor="let headers of tableHeaders" :key="headers.name">
         {{ data[headers.prop] }}
       </td>
-      <td>
+      <td *ngIf="showEditOption">
         <div style="display: flex; justify-content: space-around;">
           <i (click)="getDataToEdit(data)" class="cursor-pointer edit-icon fa fa-edit"></i>
+        </div>
+      </td>
+      <td *ngIf="showDeleteOption">
+        <div style="display: flex; justify-content: space-around;">
           <i (click)="getDataToDelete(data)" class="cursor-pointer trash-icon fa fa-trash"></i>
         </div>
       </td>
