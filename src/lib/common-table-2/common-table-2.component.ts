@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ASC, handleAscSort, DESC, handleDescSort, IHeaders } from './table-utils';
 
 @Component({
@@ -6,7 +6,7 @@ import { ASC, handleAscSort, DESC, handleDescSort, IHeaders } from './table-util
   templateUrl: './common-table-2.component.html',
   styleUrls: ['./common-table-2.component.scss']
 })
-export class CommonTableTwoComponent implements OnInit, AfterViewChecked {
+export class CommonTableTwoComponent implements OnInit {
   @Input() tableData: any[];
   @Input() dataKey: string;
   @Input() tableHeaders: IHeaders[];
@@ -16,6 +16,7 @@ export class CommonTableTwoComponent implements OnInit, AfterViewChecked {
   @Output() dataToEdit: EventEmitter<any> = new EventEmitter();
   @Output() dataToDelete: EventEmitter<any> = new EventEmitter();
   data: any[];
+  tableDataOriginalState: any[] = [];
   sortDirection = 'ASC';
   selectedHeader = null;
   rowsPerPage = 5;
@@ -29,11 +30,10 @@ export class CommonTableTwoComponent implements OnInit, AfterViewChecked {
   constructor() {}
 
   ngOnInit() {
+    this.tableDataOriginalState = this.tableData.slice(0, this.rowsPerPage);
     this.data = this.tableData;
     this.tableData = this.tableData.slice(0, this.rowsPerPage);
   }
-
-  ngAfterViewChecked() {}
 
   setSortDirection() {
     if (this.sortDirection === 'ASC') {
@@ -59,13 +59,6 @@ export class CommonTableTwoComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  handleCheckBoxCssClass() {
-    if (this.isSelectAll) {
-      return 'active';
-    }
-    return '';
-  }
-
   getRowData(data: any, index: number) {
     if (this.selectedRows.filter(item => item[this.dataKey] === data[this.dataKey]).length > 0) {
       this.removeSelectedValues(data, index);
@@ -77,13 +70,13 @@ export class CommonTableTwoComponent implements OnInit, AfterViewChecked {
   addSelectedValues(data: any, index: number) {
     this.selectedRowIndex.push(index);
     this.selectedRows.push(data);
-    // this.selectedRowData.emit(data);
+    this.selectedRowData.emit(data);
   }
 
   removeSelectedValues(data: any, index: number) {
     this.selectedRows = this.selectedRows.filter(item => item[this.dataKey] !== data[this.dataKey]);
     this.selectedRowIndex = this.selectedRowIndex.filter(i => i !== index);
-    // this.selectedRowData.emit(data);
+    this.selectedRowData.emit(data);
   }
 
   getDataToEdit(data: any) {
@@ -94,24 +87,53 @@ export class CommonTableTwoComponent implements OnInit, AfterViewChecked {
     this.dataToDelete.emit(data);
   }
 
-  toggleSelectAll(event) {
-    this.isSelectAll = event.target.checked;
+  toggleSelectAll() {
+    this.isSelectAll = !this.isSelectAll;
     if (this.isSelectAll) {
       this.selectedRows = this.tableData;
     }
     this.selectedRows = [];
   }
 
-  nextPage() {
-    this.tableData = this.data.slice(this.rowsPerPage, this.data.length);
-    this.page = this.rowsPerPage + 1;
-    this.rowsPerPage = this.rowsPerPage + this.tableData.length;
+  setTable(data: { page: number; tableData: any[]; data: any[]; tableDataOriginalState: any[]; rowsPerPage: number }) {
+    this.tableData = this.tableData;
+    this.page = data.page;
+    this.rowsPerPage = data.rowsPerPage;
+    this.tableDataOriginalState = data.tableDataOriginalState;
+    this.data = data.data;
   }
 
-  previousPage() {
-    const previous = this.data.length - this.tableData.length;
-    this.page = previous - this.tableData.length;
-    this.tableData = this.data.slice(0, previous);
-    this.rowsPerPage = previous;
-  }
+  // nextPage() {
+  //   this.tableData = this.data.slice(this.rowsPerPage, this.data.length);
+  //   this.page = this.rowsPerPage + 1;
+  //   this.rowsPerPage = this.rowsPerPage + this.tableData.length;
+  // }
+
+  // previousPage() {
+  //   const previous = this.data.length - this.tableData.length;
+  //   this.page = previous - this.tableData.length;
+  //   this.tableData = this.data.slice(0, previous);
+  //   this.rowsPerPage = previous;
+  // }
+
+  // resetPaginator() {
+  //   this.rowsPerPage = 5;
+  //   this.page = 1;
+  //   this.tableData = this.tableDataOriginalState.slice(0, this.rowsPerPage);
+  // }
+
+  // getSelectedOption(data: number) {
+  //   this.rowsPerPage = data;
+  //   this.tableData = this.data.slice(0, data);
+  // }
+
+  // goToLastPage() {
+  //   // console.log('PAGE', this.page);
+  //   // console.log('TABLE', this.tableData);
+  //   // console.log('DATA', this.data);
+  //   // console.log('ROWS', this.rowsPerPage);
+  //   // if (this.rowsPerPage === 5) {
+  //   //   this.nextPage();
+  //   // }
+  // }
 }

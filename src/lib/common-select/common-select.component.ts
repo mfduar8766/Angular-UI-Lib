@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef, Input, Output, EventEmitter } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Component({
@@ -16,6 +16,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 export class CommonSelectComponent implements ControlValueAccessor {
   @Input() options: string[] | number[];
   @Input() selectedOption = '';
+  @Output() selectedItem: EventEmitter<string> = new EventEmitter();
   isListDisplayed = false;
   disabled = false;
 
@@ -43,6 +44,8 @@ export class CommonSelectComponent implements ControlValueAccessor {
 
   setOption(option: string) {
     this.selectedOption = option;
+    this.selectedItem.emit(option);
+    this.isListDisplayed = !this.isListDisplayed;
     this.propagateChange(this.selectedOption);
   }
 
