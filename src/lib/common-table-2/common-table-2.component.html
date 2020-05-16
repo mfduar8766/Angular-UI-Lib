@@ -42,7 +42,10 @@
       :key="dataKey"
     >
       <td>
-        <div [class]="isSelectAll ? 'all-selected' : ''" class="check-box cursor-pointer">
+        <div
+          [class]="isSelectAll || selectedRowIndex.includes(i) ? 'all-selected' : ''"
+          class="check-box cursor-pointer"
+        >
           <i [class]="isSelectAll || selectedRowIndex.includes(i) ? 'fa fa-check white-check' : ''"></i>
         </div>
       </td>
@@ -58,50 +61,5 @@
     </tr>
   </table>
 
-  <common-paginator
-    [options]="numberOfRowsToDisplay"
-    [rowsPerPage]="rowsPerPage"
-    [page]="page"
-    [data]="data"
-    [tableData]="tableData"
-    [tableDataOriginalState]="tableDataOriginalState"
-    (paginatorResults)="setTable($event)"
-  ></common-paginator>
-  <!-- <footer>
-    <common-select
-      (selectedItem)="getSelectedOption($event)"
-      [options]="numberOfRowsToDisplay"
-      name="tableRows"
-      [(ngModel)]="rowsPerPage"
-    ></common-select>
-    <div
-      style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1rem; padding: 1rem;"
-    >
-      <div style="width: 100px; color: rgba(0,0,0,.26);">{{ page }} - {{ rowsPerPage }} of {{ data.length }}</div>
-      <button
-        [disabled]="page === 1 || rowsPerPage > data.length"
-        style="font-size: 1.5rem; margin-right: 1rem;"
-        class="fa fa-angle-double-left"
-        (click)="resetPaginator()"
-      ></button>
-      <button
-        [disabled]="page === 1 || rowsPerPage > data.length"
-        (click)="previousPage()"
-        style="font-size: 1.5rem; margin-right: 1rem;"
-        class="fa fa-angle-left"
-      ></button>
-      <button
-        [disabled]="rowsPerPage === data.length || rowsPerPage > data.length"
-        (click)="nextPage()"
-        style="font-size: 1.5rem; margin-right: 1rem;"
-        class="fa fa-angle-right"
-      ></button>
-      <button
-        [disabled]="rowsPerPage > data.length"
-        (click)="goToLastPage()"
-        style="font-size: 1.5rem;"
-        class="fa fa-angle-double-right"
-      ></button>
-    </div>
-  </footer> -->
+  <common-paginator [options]="numberOfRowsToDisplay"></common-paginator>
 </div>

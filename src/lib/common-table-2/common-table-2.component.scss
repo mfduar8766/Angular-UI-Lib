@@ -60,7 +60,6 @@ td {
 }
 
 .all-selected {
-  background-color: #007ad9;
   -webkit-appearance: none;
   width: 25px;
   height: 25px;
@@ -68,6 +67,7 @@ td {
   border: 2px solid #555;
   margin-right: 10px;
   margin-bottom: 0.2rem;
+  background-color: #007ad9;
 }
 
 .edit-icon {

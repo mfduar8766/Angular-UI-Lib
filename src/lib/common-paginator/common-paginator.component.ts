@@ -1,46 +1,54 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { PaginatorPubSubService } from '../services/paginatorPubSubService/paginatorPubSub.service';
 
 @Component({
   selector: 'common-paginator',
   templateUrl: './common-paginator.component.html',
   styleUrls: ['./common-paginator.component.scss']
 })
-export class CommonPaginatorComponent {
+export class CommonPaginatorComponent implements OnInit {
   @Input() options: number[];
-  @Input() rowsPerPage: number;
-  @Input() tableData: any[];
-  @Input() data: any[];
-  @Input() page: number;
-  @Input() tableDataOriginalState: any[];
-  @Output() paginatorResults: EventEmitter<{
-    page: number;
-    tableData: any[];
-    data: any[];
-    tableDataOriginalState: any[];
-    rowsPerPage: number;
-  }> = new EventEmitter();
+  rowsPerPage: number;
+  tableData: any[];
+  data: any[];
+  page: number;
+  tableDataOriginalState: any[];
 
-  sendPaginatorData() {
-    this.paginatorResults.emit({
-      page: this.page,
-      tableData: this.tableData,
-      data: this.data,
-      tableDataOriginalState: this.tableDataOriginalState,
-      rowsPerPage: this.rowsPerPage
+  constructor(private paginatorService: PaginatorPubSubService) {}
+
+  ngOnInit() {
+    this.paginatorService.state.subscribe(data => {
+      (this.rowsPerPage = data.rowsPerPage),
+        (this.tableData = data.tableData),
+        (this.data = data.data),
+        (this.page = data.page),
+        (this.tableDataOriginalState = data.tableDataOriginalState);
     });
   }
 
   getSelectedOption(data: number) {
     this.rowsPerPage = data;
     this.tableData = this.data.slice(0, data);
-    this.sendPaginatorData();
+    this.paginatorService.changeState({
+      rowsPerPage: this.rowsPerPage,
+      tableData: this.tableData,
+      data: this.data,
+      page: this.page,
+      tableDataOriginalState: this.tableDataOriginalState
+    });
   }
 
   nextPage() {
     this.tableData = this.data.slice(this.rowsPerPage, this.data.length);
     this.page = this.rowsPerPage + 1;
     this.rowsPerPage = this.rowsPerPage + this.tableData.length;
-    this.sendPaginatorData();
+    this.paginatorService.changeState({
+      page: this.page,
+      rowsPerPage: this.rowsPerPage,
+      tableData: this.tableData,
+      data: this.data,
+      tableDataOriginalState: this.tableDataOriginalState
+    });
   }
 
   previousPage() {
@@ -48,23 +56,43 @@ export class CommonPaginatorComponent {
     this.page = previous - this.tableData.length;
     this.tableData = this.data.slice(0, previous);
     this.rowsPerPage = previous;
-    this.sendPaginatorData();
+    this.paginatorService.changeState({
+      page: this.page,
+      tableData: this.tableData,
+      rowsPerPage: this.rowsPerPage,
+      data: this.data,
+      tableDataOriginalState: this.tableDataOriginalState
+    });
   }
 
   resetPaginator() {
     this.rowsPerPage = 5;
     this.page = 1;
     this.tableData = this.tableDataOriginalState.slice(0, this.rowsPerPage);
-    this.sendPaginatorData();
+    this.paginatorService.changeState({
+      page: this.page,
+      tableData: this.tableData,
+      rowsPerPage: this.rowsPerPage,
+      data: this.data,
+      tableDataOriginalState: this.tableDataOriginalState
+    });
   }
 
+  calculateendOfPages() {}
+
   goToLastPage() {
-    // console.log('PAGE', this.page);
-    // console.log('TABLE', this.tableData);
-    // console.log('DATA', this.data);
-    // console.log('ROWS', this.rowsPerPage);
-    // if (this.rowsPerPage === 5) {
-    //   this.nextPage();
-    // }
+    const subtractLengths = this.data.length - this.tableData.length;
+    if (subtractLengths < this.rowsPerPage) {
+      this.page = this.rowsPerPage + 1;
+      this.tableData = this.data.slice(subtractLengths + 1);
+      this.rowsPerPage = this.data.length;
+      this.paginatorService.changeState({
+        page: this.page,
+        tableData: this.tableData,
+        rowsPerPage: this.rowsPerPage,
+        data: this.data,
+        tableDataOriginalState: this.tableDataOriginalState
+      });
+    }
   }
 }

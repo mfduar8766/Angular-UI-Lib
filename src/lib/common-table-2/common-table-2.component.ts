@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ASC, handleAscSort, DESC, handleDescSort, IHeaders } from './table-utils';
+import { PaginatorPubSubService } from '../services/paginatorPubSubService/paginatorPubSub.service';
 
 @Component({
   selector: 'common-table-2',
@@ -12,30 +13,40 @@ export class CommonTableTwoComponent implements OnInit {
   @Input() tableHeaders: IHeaders[];
   @Input() showEditOption: boolean;
   @Input() showDeleteOption: boolean;
+  @Input() rowsPerPage = 5;
   @Output() selectedRowData: EventEmitter<any> = new EventEmitter();
   @Output() dataToEdit: EventEmitter<any> = new EventEmitter();
   @Output() dataToDelete: EventEmitter<any> = new EventEmitter();
-  data: any[];
-  tableDataOriginalState: any[] = [];
   sortDirection = 'ASC';
   selectedHeader = null;
-  rowsPerPage = 5;
-  rowsToDisplay = null;
   numberOfRowsToDisplay = [5, 10, 15, 20, 25];
   isSelectAll = false;
-  page = 1;
   selectedRows: any[] = [];
   selectedRowIndex: number[] = [];
 
-  constructor() {}
+  constructor(private paginatorService: PaginatorPubSubService) {}
 
   ngOnInit() {
-    this.tableDataOriginalState = this.tableData.slice(0, this.rowsPerPage);
-    this.data = this.tableData;
+    const originalState = this.tableData.slice(0, this.rowsPerPage);
+    const tableDataCopy = this.tableData;
     this.tableData = this.tableData.slice(0, this.rowsPerPage);
+    this.handlePaginatorService(originalState, tableDataCopy);
   }
 
-  setSortDirection() {
+  handlePaginatorService(originalState: any[], tableDataCopy: any[]) {
+    this.paginatorService.changeState({
+      rowsPerPage: this.rowsPerPage,
+      tableData: this.tableData,
+      data: tableDataCopy,
+      page: 1,
+      tableDataOriginalState: originalState
+    });
+    this.paginatorService.state.subscribe(data => {
+      (this.rowsPerPage = data.rowsPerPage), (this.tableData = data.tableData);
+    });
+  }
+
+  setSortDirection(): string {
     if (this.sortDirection === 'ASC') {
       this.sortDirection = 'DESC';
       return this.sortDirection;
@@ -46,7 +57,7 @@ export class CommonTableTwoComponent implements OnInit {
     }
   }
 
-  handleSort(header: string) {
+  handleSort(header: string): any[] {
     this.setSortDirection();
     this.selectedHeader = header;
     switch (this.sortDirection) {
@@ -94,46 +105,4 @@ export class CommonTableTwoComponent implements OnInit {
     }
     this.selectedRows = [];
   }
-
-  setTable(data: { page: number; tableData: any[]; data: any[]; tableDataOriginalState: any[]; rowsPerPage: number }) {
-    this.tableData = data.tableData;
-    this.page = data.page;
-    this.rowsPerPage = data.rowsPerPage;
-    this.tableDataOriginalState = data.tableDataOriginalState;
-    this.data = data.data;
-  }
-
-  // nextPage() {
-  //   this.tableData = this.data.slice(this.rowsPerPage, this.data.length);
-  //   this.page = this.rowsPerPage + 1;
-  //   this.rowsPerPage = this.rowsPerPage + this.tableData.length;
-  // }
-
-  // previousPage() {
-  //   const previous = this.data.length - this.tableData.length;
-  //   this.page = previous - this.tableData.length;
-  //   this.tableData = this.data.slice(0, previous);
-  //   this.rowsPerPage = previous;
-  // }
-
-  // resetPaginator() {
-  //   this.rowsPerPage = 5;
-  //   this.page = 1;
-  //   this.tableData = this.tableDataOriginalState.slice(0, this.rowsPerPage);
-  // }
-
-  // getSelectedOption(data: number) {
-  //   this.rowsPerPage = data;
-  //   this.tableData = this.data.slice(0, data);
-  // }
-
-  // goToLastPage() {
-  //   // console.log('PAGE', this.page);
-  //   // console.log('TABLE', this.tableData);
-  //   // console.log('DATA', this.data);
-  //   // console.log('ROWS', this.rowsPerPage);
-  //   // if (this.rowsPerPage === 5) {
-  //   //   this.nextPage();
-  //   // }
-  // }
 }
