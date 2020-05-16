@@ -12,3 +12,5 @@ export * from './common-select/common-select.module';
 export * from './counter-componenet/counter.component.module';
 export * from './services/localStorage/localStorage.module';
 export * from './common-slider/common-slider.module';
+export * from './common-table-2/common-table-2.module';
+export * from './common-paginator/common-paginator.module';
