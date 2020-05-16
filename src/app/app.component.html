@@ -158,7 +158,7 @@
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
 
-  <common-card
+  <!-- <common-card
     [headerStyles]="{
       'background-color': 'blue',
       color: 'white',
@@ -183,7 +183,7 @@
     </div>
   </common-card>
 
-  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div> -->
 
   <common-card
     [headerStyles]="{
@@ -230,7 +230,7 @@
     <pre>{{ form.value | json }}</pre>
     <p>ngModel value: {{ state }}</p>
     <form #form="ngForm">
-      <common-select [stateList]="statesArray" name="state" [(ngModel)]="state"></common-select>
+      <common-select [options]="statesArray" name="state" [(ngModel)]="state"></common-select>
       <button type="submit">Submit State Form</button>
     </form>
     <!-- <form style="display: flex; flex-direction: column;" #form="ngForm" (ngSubmit)="submitTestForm(form.value)">
@@ -319,5 +319,35 @@
       Common Slider
     </div>
     <common-slider></common-slider>
+  </common-card>
+
+  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+
+  <common-card
+    [headerStyles]="{
+      'background-color': 'blue',
+      color: 'white',
+      height: '30px',
+      'border-radius': '0.5rem'
+    }"
+    [heightWidth]="{
+      height: '100%',
+      width: '100%'
+    }"
+    [showHeader]="'true'"
+  >
+    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
+      Common Table
+    </div>
+    <common-table-2
+      [dataKey]="'agencyId'"
+      [tableData]="tableData"
+      [tableHeaders]="tableHeaders2"
+      (selectedRowData)="getRowData($event)"
+      (dataToEdit)="getDataToEdit($event)"
+      (dataToDelete)="getDataToDelete($event)"
+      [showEditOption]="true"
+      [showDeleteOption]="true"
+    ></common-table-2>
   </common-card>
 </div>

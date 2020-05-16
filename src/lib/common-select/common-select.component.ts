@@ -1,6 +1,5 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef, Input, Output, EventEmitter } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-import { State } from 'src/assets/testData';
 
 @Component({
   selector: 'common-select',
@@ -15,8 +14,9 @@ import { State } from 'src/assets/testData';
   ]
 })
 export class CommonSelectComponent implements ControlValueAccessor {
-  @Input() stateList: State[];
-  @Input() selectedState = '';
+  @Input() options: string[] | number[];
+  @Input() selectedOption = '';
+  @Output() selectedItem: EventEmitter<string> = new EventEmitter();
   isListDisplayed = false;
   disabled = false;
 
@@ -26,7 +26,7 @@ export class CommonSelectComponent implements ControlValueAccessor {
 
   writeValue(value: any): void {
     if (value !== undefined) {
-      this.selectedState = value;
+      this.selectedOption = value;
     }
   }
 
@@ -42,9 +42,11 @@ export class CommonSelectComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  setSelectedState(state: string) {
-    this.selectedState = state;
-    this.propagateChange(this.selectedState);
+  setOption(option: string) {
+    this.selectedOption = option;
+    this.selectedItem.emit(option);
+    this.isListDisplayed = !this.isListDisplayed;
+    this.propagateChange(this.selectedOption);
   }
 
   toggleList() {
