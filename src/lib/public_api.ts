@@ -14,3 +14,4 @@ export * from './services/localStorage/localStorage.module';
 export * from './common-slider/common-slider.module';
 export * from './common-table-2/common-table-2.module';
 export * from './common-paginator/common-paginator.module';
+export * from './common-side-bar/common-side-bar.module';

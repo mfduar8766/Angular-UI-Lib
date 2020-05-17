@@ -1472,7 +1472,7 @@ export interface State {
   abbreviation: string;
 }
 
-export const STATES = [
+export const States = [
   'Alabama',
   'Alaska',
   'American Samoa',

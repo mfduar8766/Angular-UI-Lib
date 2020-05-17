@@ -1,5 +1,5 @@
 import { Component, ViewChild, AfterViewInit, AfterViewChecked, OnInit } from '@angular/core';
-import { mockData, tabContent, tableHeaders, STATES, tableHeaders2 } from 'src/assets/testData';
+import { mockData, tabContent, tableHeaders, States, tableHeaders2 } from 'src/assets/testData';
 import { formConfig } from '../lib/common-reactive-form/Models /form-config';
 import { DynamicFormComponent } from '../lib/common-reactive-form/dynamic-form/dynamic-form.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -18,8 +18,9 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   tabContent = tabContent;
   config = formConfig;
   selectedValues: string[];
-  statesArray = STATES;
+  statesArray = States;
   state = 'Georgia';
+  isSideBarOpen = false;
   tableHeaders2 = tableHeaders2;
   languages = ['French', 'Korean', 'Italian'];
   outerCounterValue = 5;
@@ -155,4 +156,9 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   getDataToEdit(data) {}
 
   getDataToDelete(data) {}
+
+  toggleSideBar() {
+    this.isSideBarOpen = !this.isSideBarOpen;
+    console.log('TOGGLE', this.isSideBarOpen);
+  }
 }
