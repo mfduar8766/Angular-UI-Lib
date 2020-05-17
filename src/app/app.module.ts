@@ -19,7 +19,8 @@ import {
   LocalStorageModule,
   CommonSliderModule,
   CommonTableTwoModule,
-  CommonPaginatorModule
+  CommonPaginatorModule,
+  CommonSideBarModule
 } from 'src/lib/public_api';
 import { PrimeNgModule } from '../lib/PrimeNgModules.module';
 
@@ -44,7 +45,8 @@ import { PrimeNgModule } from '../lib/PrimeNgModules.module';
     CommonCounterModule,
     CommonSliderModule,
     CommonTableTwoModule,
-    CommonPaginatorModule
+    CommonPaginatorModule,
+    CommonSideBarModule
   ],
   providers: [LocalStorageModule],
   bootstrap: [AppComponent]
