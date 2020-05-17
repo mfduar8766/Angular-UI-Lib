@@ -116,12 +116,10 @@
         [showDropDown]="'true'"
         [placeholder]="'Search agencies'"
         (selectedSearchResult)="getSelectedResults($event)"
-        [stylesClass]="{
-          width: '50%'
-        }"
       ></common-search>
     </div>
   </common-card>
+
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
 
   <common-card
@@ -157,33 +155,6 @@
   </common-card>
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-
-  <!-- <common-card
-    [headerStyles]="{
-      'background-color': 'blue',
-      color: 'white',
-      height: '30px',
-      'border-radius': '0.5rem'
-    }"
-    [showHeader]="'true'"
-  >
-    <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
-      Common Table
-    </div>
-    <div style="height: 100%; width: 100%;">
-      <common-table
-        [dataKey]="'agencyId'"
-        [styleClass]="{ height: '100%', width: '50%' }"
-        [tableData]="tableData"
-        [columns]="tableHeaders"
-        [rowsperPage]="5"
-        [rowsPerPageOptions]="[5, 10, 15, 20]"
-        (editTableData)="editTableData($event)"
-      ></common-table>
-    </div>
-  </common-card>
-
-  <div style="margin-top: 2rem; margin-bottom: 2rem;"></div> -->
 
   <common-card
     [headerStyles]="{
@@ -339,6 +310,13 @@
     <div style="height: fit-content; width: fit-content; padding-left: 1rem;" role="header">
       Common Table
     </div>
+    <common-search
+      [searchArray]="tableData"
+      [showDropDown]="'true'"
+      [placeholder]="'Search agencies'"
+      (selectedSearchResult)="getSelectedResults($event)"
+    ></common-search>
+    <div style="margin-top: 1rem;"></div>
     <common-table-2
       [dataKey]="'agencyId'"
       [tableData]="tableData"

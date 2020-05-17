@@ -9,16 +9,14 @@ export class CommonSearchComponent {
   @Input() isDisabled = false;
   @Input() showDropDown = false;
   @Input() placeholder = 'Search...';
-  @Input() searchArray;
+  @Input() searchArray: any[];
   @Input() stylesClass: string;
   @Output() selectedSearchResult: EventEmitter<any> = new EventEmitter();
   searchQuery = '';
   searchResults = null;
 
-  constructor() {}
-
   handleSearch(searchQuery: string) {
-    const lowerCaseQueryString = searchQuery.toLocaleLowerCase().trim();
+    const lowerCaseQueryString = searchQuery.toLowerCase().trim();
     if (lowerCaseQueryString.length === 0) {
       this.searchQuery = '';
     } else if (lowerCaseQueryString.length > 0) {
@@ -33,27 +31,28 @@ export class CommonSearchComponent {
   }
 
   getSearchResults() {
-    const filteredAgents = [];
-    let errorMessage: string = null;
-    this.searchArray.forEach(data => {
-      Object.values(data)
-        .map(value =>
-          value
-            .toString()
-            .toLowerCase()
-            .trim()
-        )
-        .some(searchString => {
-          if (!searchString.includes(this.searchQuery)) {
-            errorMessage = 'No records found.';
-            return false;
-          } else if (searchString.includes(this.searchQuery)) {
-            filteredAgents.push({ ...data, field: searchString });
-            return true;
-          }
-          return false;
-        });
+    const arrayKeys = this.searchArray.map(element => Object.keys(element))[0];
+    const searchResult = [];
+    let errorMessage = null;
+    this.searchArray.forEach(element => {
+      arrayKeys.forEach(key => {
+        const lowerCaseElement = element[key]
+          .toString()
+          .toLowerCase()
+          .trim();
+        if (!lowerCaseElement.includes(this.searchQuery)) {
+          errorMessage = [{ value: 'No Records found,' }];
+        } else if (lowerCaseElement.includes(this.searchQuery)) {
+          searchResult.push({ ...element, value: element[key] });
+        }
+      });
     });
-    return filteredAgents && filteredAgents.length ? filteredAgents : [{ field: errorMessage }];
+    return searchResult && searchResult.length ? searchResult : errorMessage;
+  }
+
+  sendSearchResult(value, selectedString) {
+    this.searchQuery = selectedString;
+    this.searchResults = null;
+    this.selectedSearchResult.emit(value);
   }
 }

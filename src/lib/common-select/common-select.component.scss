@@ -1,4 +1,12 @@
-button {
+.select-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 2rem;
@@ -23,8 +31,7 @@ button {
 }
 
 .list-container {
-  position: relative;
-  width: 200px;
+  position: absolute;
   height: auto;
   background: white;
   padding: 0;
@@ -33,7 +40,8 @@ button {
   transition: 0.3s;
   overflow-y: scroll;
   height: 200px;
-  z-index: 999;
+  width: 200px;
+  z-index: 99;
 }
 
 .list {
