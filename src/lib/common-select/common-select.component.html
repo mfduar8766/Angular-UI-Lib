@@ -1,21 +1,15 @@
-<ng-container>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 200px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; width: 200px;">
-      <button (click)="toggleList()">
-        <div *ngIf="selectedOption; else showDefault">{{ selectedOption }}</div>
-        <ng-template #showDefault>
-          <div>Choose</div>
-        </ng-template>
-      </button>
-      <div (click)="toggleList()" style="color: gray; z-index: 99;" class="cursor-pointer fa fa-chevron-down"></div>
-    </div>
-    <div style="border: 1px solid rgb(224, 210, 210); width: 200px; border-width: thin;"></div>
-    <div *ngIf="isListDisplayed" class="list-container">
-      <ul style="padding: 0; z-index: 999;">
-        <li (click)="setOption(option)" class="list" *ngFor="let option of options">
-          {{ option }}
-        </li>
-      </ul>
-    </div>
+<div class="select-container">
+  <div (click)="toggleList()" class="dropdown">
+    <div *ngIf="selectedOption; else showDefault">{{ selectedOption }}</div>
+    <ng-template #showDefault>
+      <div>Choose</div>
+    </ng-template>
+    <i style="color: gray; z-index: 99;" class="cursor-pointer fa fa-chevron-down"></i>
   </div>
-</ng-container>
+  <div style="border: 1px solid rgb(224, 210, 210); width: 200px; border-width: thin;"></div>
+  <ul *ngIf="isListDisplayed" class="list-container">
+    <li (click)="setOption(option)" class="list" *ngFor="let option of options">
+      {{ option }}
+    </li>
+  </ul>
+</div>

@@ -1,30 +1,25 @@
-<div class="container height-width">
-  <div class="form-group row align-items-center">
-    <div class="ui-g-12">
-      <input
-        [class]="isDisabled === true ? 'form-control disabled-class' : 'form-control'"
-        [placeholder]="placeholder"
-        type="search"
-        pInputText
-        name="searchQuery"
-        #searchQuery
-        [ngStyle]="stylesClass"
-        [disabled]="isDisabled"
-        (input)="handleSearch(searchQuery.value)"
-      />
-    </div>
-    <div *ngIf="searchQuery.value.length > 0" class="position-relative ui-g-12">
-      <ul [ngStyle]="stylesClass" class="cursor-pointer list-container">
-        <li
-          (click)="selectedSearchResult.emit(value)"
-          class="no-bullets list"
-          style="text-transform: capitalize;"
-          *ngFor="let value of searchResults; let i = index"
-          :key="i"
-        >
-          {{ value.field }}
-        </li>
-      </ul>
-    </div>
-  </div>
+<div [ngStyle]="stylesClass" class="search-container">
+  <input
+    [class]="isDisabled === true ? 'form-control disabled-class' : 'form-control'"
+    class="input-styles"
+    [placeholder]="placeholder"
+    type="search"
+    pInputText
+    name="searchQuery"
+    [disabled]="isDisabled"
+    [(ngModel)]="searchQuery"
+    (ngModelChange)="handleSearch($event)"
+    [ngStyle]="stylesClass"
+  />
+  <ul [ngStyle]="stylesClass" *ngIf="searchQuery.length > 0" class="cursor-pointer list-container">
+    <li
+      (click)="sendSearchResult(result, result.value)"
+      class="no-bullets list"
+      style="text-transform: capitalize;"
+      *ngFor="let result of searchResults; let i = index"
+      :key="i"
+    >
+      {{ result.value }}
+    </li>
+  </ul>
 </div>

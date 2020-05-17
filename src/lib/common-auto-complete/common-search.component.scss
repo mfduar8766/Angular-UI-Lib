@@ -1,15 +1,15 @@
-.container {
-  position: relative;
+.search-container {
+  width: 500px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.defaultInputStyle {
-  width: 25rem;
+.input-styles {
+  width: 500px;
 }
 
 .list-container {
-  position: relative;
-  width: 100%;
-  height: auto;
+  position: absolute;
   background: white;
   padding: 0;
   margin: 0;
@@ -17,6 +17,8 @@
   transition: 0.3s;
   overflow-y: scroll;
   height: 200px;
+  width: 500px;
+  z-index: 99;
 }
 
 .list {
