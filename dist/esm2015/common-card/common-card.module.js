@@ -1,0 +1,18 @@
+import { __decorate } from 'tslib';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CommonCardComponent } from './common-card.component';
+import { PrimeNgModule } from '../PrimeNgModules.module';
+let CommonCardModule = class CommonCardModule {};
+CommonCardModule = __decorate(
+  [
+    NgModule({
+      imports: [CommonModule, PrimeNgModule],
+      declarations: [CommonCardComponent],
+      exports: [CommonCardComponent]
+    })
+  ],
+  CommonCardModule
+);
+export { CommonCardModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tbW9uLWNhcmQubW9kdWxlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vYW5ndWxhci1jb21tb24tY29tcG9uZW50cy8iLCJzb3VyY2VzIjpbImNvbW1vbi1jYXJkL2NvbW1vbi1jYXJkLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLG1CQUFtQixFQUFFLE1BQU0seUJBQXlCLENBQUM7QUFDOUQsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLDBCQUEwQixDQUFDO0FBT3pELElBQWEsZ0JBQWdCLEdBQTdCLE1BQWEsZ0JBQWdCO0NBQUcsQ0FBQTtBQUFuQixnQkFBZ0I7SUFMNUIsUUFBUSxDQUFDO1FBQ1IsT0FBTyxFQUFFLENBQUMsWUFBWSxFQUFFLGFBQWEsQ0FBQztRQUN0QyxZQUFZLEVBQUUsQ0FBQyxtQkFBbUIsQ0FBQztRQUNuQyxPQUFPLEVBQUUsQ0FBQyxtQkFBbUIsQ0FBQztLQUMvQixDQUFDO0dBQ1csZ0JBQWdCLENBQUc7U0FBbkIsZ0JBQWdCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5pbXBvcnQgeyBDb21tb25DYXJkQ29tcG9uZW50IH0gZnJvbSAnLi9jb21tb24tY2FyZC5jb21wb25lbnQnO1xuaW1wb3J0IHsgUHJpbWVOZ01vZHVsZSB9IGZyb20gJy4uL1ByaW1lTmdNb2R1bGVzLm1vZHVsZSc7XG5cbkBOZ01vZHVsZSh7XG4gIGltcG9ydHM6IFtDb21tb25Nb2R1bGUsIFByaW1lTmdNb2R1bGVdLFxuICBkZWNsYXJhdGlvbnM6IFtDb21tb25DYXJkQ29tcG9uZW50XSxcbiAgZXhwb3J0czogW0NvbW1vbkNhcmRDb21wb25lbnRdXG59KVxuZXhwb3J0IGNsYXNzIENvbW1vbkNhcmRNb2R1bGUge31cbiJdfQ==

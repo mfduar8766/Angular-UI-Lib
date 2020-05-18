@@ -1,0 +1,17 @@
+import { __decorate } from 'tslib';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CommonSideBarComponent } from './common-sideBar.component';
+let CommonSideBarModule = class CommonSideBarModule {};
+CommonSideBarModule = __decorate(
+  [
+    NgModule({
+      imports: [CommonModule],
+      declarations: [CommonSideBarComponent],
+      exports: [CommonSideBarComponent]
+    })
+  ],
+  CommonSideBarModule
+);
+export { CommonSideBarModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tbW9uLXNpZGUtYmFyLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2FuZ3VsYXItY29tbW9uLWNvbXBvbmVudHMvIiwic291cmNlcyI6WyJjb21tb24tc2lkZS1iYXIvY29tbW9uLXNpZGUtYmFyLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLHNCQUFzQixFQUFFLE1BQU0sNEJBQTRCLENBQUM7QUFPcEUsSUFBYSxtQkFBbUIsR0FBaEMsTUFBYSxtQkFBbUI7Q0FBRyxDQUFBO0FBQXRCLG1CQUFtQjtJQUwvQixRQUFRLENBQUM7UUFDUixPQUFPLEVBQUUsQ0FBQyxZQUFZLENBQUM7UUFDdkIsWUFBWSxFQUFFLENBQUMsc0JBQXNCLENBQUM7UUFDdEMsT0FBTyxFQUFFLENBQUMsc0JBQXNCLENBQUM7S0FDbEMsQ0FBQztHQUNXLG1CQUFtQixDQUFHO1NBQXRCLG1CQUFtQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xuaW1wb3J0IHsgQ29tbW9uU2lkZUJhckNvbXBvbmVudCB9IGZyb20gJy4vY29tbW9uLXNpZGVCYXIuY29tcG9uZW50JztcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0czogW0NvbW1vbk1vZHVsZV0sXG4gIGRlY2xhcmF0aW9uczogW0NvbW1vblNpZGVCYXJDb21wb25lbnRdLFxuICBleHBvcnRzOiBbQ29tbW9uU2lkZUJhckNvbXBvbmVudF1cbn0pXG5leHBvcnQgY2xhc3MgQ29tbW9uU2lkZUJhck1vZHVsZSB7fVxuIl19

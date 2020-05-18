@@ -1,0 +1,3113 @@
+{
+  "__symbolic": "module",
+  "version": 4,
+  "metadata": {
+    "PrimeNgModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 31,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 32,
+                  "character": 12
+                }
+              ],
+              "exports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/button",
+                  "name": "ButtonModule",
+                  "line": 34,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/calendar",
+                  "name": "CalendarModule",
+                  "line": 35,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/checkbox",
+                  "name": "CheckboxModule",
+                  "line": 36,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/chips",
+                  "name": "ChipsModule",
+                  "line": 37,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/card",
+                  "name": "CardModule",
+                  "line": 38,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/confirmdialog",
+                  "name": "ConfirmDialogModule",
+                  "line": 39,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/dropdown",
+                  "name": "DropdownModule",
+                  "line": 40,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/dialog",
+                  "name": "DialogModule",
+                  "line": 41,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/lightbox",
+                  "name": "LightboxModule",
+                  "line": 42,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/inputtext",
+                  "name": "InputTextModule",
+                  "line": 43,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/inputmask",
+                  "name": "InputMaskModule",
+                  "line": 44,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/inputswitch",
+                  "name": "InputSwitchModule",
+                  "line": 45,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/inputtextarea",
+                  "name": "InputTextareaModule",
+                  "line": 46,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/listbox",
+                  "name": "ListboxModule",
+                  "line": 47,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/multiselect",
+                  "name": "MultiSelectModule",
+                  "line": 48,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/selectbutton",
+                  "name": "SelectButtonModule",
+                  "line": 49,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/spinner",
+                  "name": "SpinnerModule",
+                  "line": 50,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/sidebar",
+                  "name": "SidebarModule",
+                  "line": 51,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/tabview",
+                  "name": "TabViewModule",
+                  "line": 52,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/table",
+                  "name": "TableModule",
+                  "line": 53,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/toolbar",
+                  "name": "ToolbarModule",
+                  "line": 54,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/togglebutton",
+                  "name": "ToggleButtonModule",
+                  "line": 55,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/paginator",
+                  "name": "PaginatorModule",
+                  "line": 56,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/toast",
+                  "name": "ToastModule",
+                  "line": 57,
+                  "character": 4
+                }
+              ],
+              "providers": [
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/api",
+                  "name": "ConfirmationService",
+                  "line": 59,
+                  "character": 14
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/api",
+                  "name": "MessageService",
+                  "line": 59,
+                  "character": 35
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonButtonModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 4,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 5,
+                  "character": 12
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵa" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵa" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonModalModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 4,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 5,
+                  "character": 12
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵb" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵb" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonCardModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 6,
+                  "character": 12
+                },
+                { "__symbolic": "reference", "name": "PrimeNgModule" }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵc" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵc" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonTableModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 6,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 7,
+                  "character": 12
+                },
+                { "__symbolic": "reference", "name": "PrimeNgModule" },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 7,
+                  "character": 41
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵd" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵd" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonSearchModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 6,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 7,
+                  "character": 12
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 7,
+                  "character": 26
+                },
+                { "__symbolic": "reference", "name": "PrimeNgModule" }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵe" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵe" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonTabModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 6,
+                  "character": 12
+                },
+                { "__symbolic": "reference", "name": "PrimeNgModule" }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵf" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵf" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "DynamicFormModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 21,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/platform-browser/animations",
+                  "name": "BrowserAnimationsModule",
+                  "line": 23,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 24,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "ReactiveFormsModule",
+                  "line": 25,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 26,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/multiselect",
+                  "name": "MultiSelectModule",
+                  "line": 27,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/calendar",
+                  "name": "CalendarModule",
+                  "line": 28,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/dropdown",
+                  "name": "DropdownModule",
+                  "line": 29,
+                  "character": 4
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "primeng/slider",
+                  "name": "SliderModule",
+                  "line": 30,
+                  "character": 4
+                }
+              ],
+              "declarations": [
+                { "__symbolic": "reference", "name": "ɵg" },
+                { "__symbolic": "reference", "name": "ɵh" },
+                { "__symbolic": "reference", "name": "ɵi" },
+                { "__symbolic": "reference", "name": "ɵj" },
+                { "__symbolic": "reference", "name": "ɵk" },
+                { "__symbolic": "reference", "name": "ɵl" },
+                { "__symbolic": "reference", "name": "ɵm" },
+                { "__symbolic": "reference", "name": "ɵn" },
+                { "__symbolic": "reference", "name": "ɵo" },
+                { "__symbolic": "reference", "name": "ɵp" }
+              ],
+              "exports": [{ "__symbolic": "reference", "name": "ɵh" }],
+              "entryComponents": [
+                { "__symbolic": "reference", "name": "ɵi" },
+                { "__symbolic": "reference", "name": "ɵj" },
+                { "__symbolic": "reference", "name": "ɵk" },
+                { "__symbolic": "reference", "name": "ɵl" },
+                { "__symbolic": "reference", "name": "ɵm" },
+                { "__symbolic": "reference", "name": "ɵn" },
+                { "__symbolic": "reference", "name": "ɵo" },
+                { "__symbolic": "reference", "name": "ɵp" }
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonMultiSelectModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 6,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 7,
+                  "character": 12
+                },
+                { "__symbolic": "reference", "name": "PrimeNgModule" },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "ReactiveFormsModule",
+                  "line": 7,
+                  "character": 41
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 7,
+                  "character": 62
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵq" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵq" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonSplitButtonModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 6,
+                  "character": 12
+                }
+              ],
+              "declarations": [
+                { "__symbolic": "reference", "name": "ɵr" },
+                { "__symbolic": "reference", "name": "ɵs" }
+              ],
+              "exports": [{ "__symbolic": "reference", "name": "ɵr" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonSelectModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 6,
+                  "character": 12
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "ReactiveFormsModule",
+                  "line": 6,
+                  "character": 26
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 6,
+                  "character": 47
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵt" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵt" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonCounterModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 6,
+                  "character": 12
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 6,
+                  "character": 26
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "ReactiveFormsModule",
+                  "line": 6,
+                  "character": 39
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵu" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵu" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "LocalStorageModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [{ "providers": [{ "__symbolic": "reference", "name": "ɵv" }] }]
+        }
+      ],
+      "members": {}
+    },
+    "CommonSliderModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 6,
+                  "character": 12
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 6,
+                  "character": 26
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "ReactiveFormsModule",
+                  "line": 6,
+                  "character": 39
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵw" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵw" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonTableTwoModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 7,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 8,
+                  "character": 12
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 8,
+                  "character": 26
+                },
+                { "__symbolic": "reference", "name": "CommonPaginatorModule" }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵba" }],
+              "providers": [{ "__symbolic": "reference", "name": "ɵz" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵba" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonPaginatorModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 7,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 8,
+                  "character": 12
+                },
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/forms",
+                  "name": "FormsModule",
+                  "line": 8,
+                  "character": 26
+                },
+                { "__symbolic": "reference", "name": "CommonSelectModule" }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵx" }],
+              "providers": [{ "__symbolic": "reference", "name": "ɵz" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵx" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "CommonSideBarModule": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 4,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "imports": [
+                {
+                  "__symbolic": "reference",
+                  "module": "@angular/common",
+                  "name": "CommonModule",
+                  "line": 5,
+                  "character": 12
+                }
+              ],
+              "declarations": [{ "__symbolic": "reference", "name": "ɵbb" }],
+              "exports": [{ "__symbolic": "reference", "name": "ɵbb" }]
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵa": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-button",
+              "template": "\n    <ng-container>\n      <button\n        [ngStyle]=\"{ 'background-color': backgroundColor }\"\n        [type]=\"buttonType\"\n        (click)=\"handleClick.emit($event)\"\n        [disabled]=\"isDisabled\"\n      >\n        {{ buttonText }}\n      </button>\n    </ng-container>\n  ",
+              "styles": [
+                "button{padding:.5rem 2rem;margin:.5rem;font-size:1rem;color:#fff;border:.1rem solid;border-radius:.5rem;text-transform:uppercase;-webkit-transition:.3s ease-out;transition:.3s ease-out;cursor:pointer;background-color:green}button:active,button:focus{outline:0}.primary{border-color:var(--primary);color:var(--primary)}.primary:active,.primary:hover{background-color:var(--primary);color:#fff}.clear{border:none;color:#000}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "buttonText": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 19,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "buttonType": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 20,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "isDisabled": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 21,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "backgroundColor": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 22,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "handleClick": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 23,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [{ "__symbolic": "constructor" }],
+        "ngOnInit": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵb": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-modal",
+              "template": "\n    <div *ngIf=\"isModalOpen\" [ngStyle]=\"classProp\" class=\"modal-container\">\n      <div modal-inner-container>\n        <div *ngIf=\"showHeader\" class=\"modal-header\">\n          <div style=\"margin-left: 0.5rem;\">{{ headerText }}</div>\n          <div class=\"icon-container\">\n            <i (click)=\"closeModal.emit($event)\" class=\"times-icon fa fa-times\"></i>\n          </div>\n        </div>\n      </div>\n      <div class=\"modal-content\">\n        <ng-content select=\"div[role=content]\"></ng-content>\n      </div>\n      <footer *ngIf=\"showFooter\" class=\"modal-footer\">\n        <ng-content select=\"div[role=footer]\"></ng-content>\n      </footer>\n    </div>\n    <div [class.is-overlay]=\"isModalOpen\"></div>\n  ",
+              "styles": [
+                ".modal-container{position:absolute;top:30%;left:40%;box-shadow:0 8px 8px 8px rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s;-webkit-transform:translate(-30%,-40%);transform:translate(-30%,-40%);z-index:3;box-sizing:border-box;overflow-y:scroll;height:50%;width:50%;background-color:#fff}.is-overlay{position:fixed;top:0;right:0;bottom:0;height:100vh;width:100vw;left:0;background-color:rgba(0,0,0,.6);z-index:2}.modal-inner-container{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;height:100%;width:100%}.modal-header{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;width:100%;height:2.5rem;box-shadow:0 0 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s}.icon-container{display:-webkit-box;display:flex;justify-content:space-around;-webkit-box-align:center;align-items:center;height:100%;width:5%}.times-icon{color:red;cursor:pointer}.expand-icon{font-size:1.2rem;font-weight:bolder;color:#000;cursor:pointer;margin-right:.5rem}.modal-content{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;height:100%;width:100%;color:#000;box-shadow:0 0 8px 0 rgba(0,0,0,.2)}.modal-footer{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;width:100%;height:2.5rem}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "isModalOpen": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 26,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "headerText": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 27,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showHeader": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 28,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showFooter": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 29,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "classProp": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 30,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "closeModal": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 31,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ɵc": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-card",
+              "template": "\n    <div [ngStyle]=\"heightWidth\" class=\"card-container height-width\">\n      <div class=\"card\">\n        <div [ngStyle]=\"headerStyles\" *ngIf=\"showHeader\" class=\"card-header\">\n          <ng-content select=\"div[role=header]\"></ng-content>\n        </div>\n        <div class=\"card-body height-width\">\n          <ng-content></ng-content>\n        </div>\n        <div class=\"card-footer\" *ngIf=\"showFooter\">\n          <ng-content select=\"div[role=footer]\"></ng-content>\n        </div>\n      </div>\n    </div>\n  ",
+              "styles": [
+                ".card-container{height:50%;width:50%;padding:0;margin:0;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s;overflow:hidden;box-sizing:border-box}.card-header{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;width:100%;height:100%;box-sizing:border-box;overflow:hidden;box-shadow:0 0 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s}.card-body{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;height:100%;width:100%;overflow:hidden;box-sizing:border-box;margin:.5rem 0;word-wrap:break-word}.card-footer{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;width:100%;height:100%;overflow:hidden;box-sizing:border-box}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "showHeader": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 22,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showFooter": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 23,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "heightWidth": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 24,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "headerStyles": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 25,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [{ "__symbolic": "constructor" }],
+        "ngOnInit": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵd": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 4,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-table",
+              "template": "<ng-container *ngIf=\"tableData && tableData.length; else showErrorMessage\">\n  <p-confirmDialog header=\"Confirmation\" icon=\"pi pi-exclamation-triangle\"></p-confirmDialog>\n  <p-toast key=\"deleteSuccess\"></p-toast>\n  <p-table\n    #dt\n    [columns]=\"columns\"\n    [value]=\"tableData\"\n    [dataKey]=\"dataKey\"\n    [responsive]=\"true\"\n    [resizableColumns]=\"true\"\n    [rowHover]=\"true\"\n    [rows]=\"rowsperPage\"\n    [scrollable]=\"true\"\n    [style]=\"styleClass\"\n    [rowHover]=\"true\"\n    [totalRecords]=\"totalRecords\"\n    [(first)]=\"first\"\n    [paginator]=\"showPagination\"\n    [(selection)]=\"selectedData\"\n  >\n    <ng-template pTemplate=\"caption\">\n      <div style=\"display: flex; justify-content: flex-start; height: 100%; width: 100%;\">\n        <input\n          pInputText\n          type=\"text\"\n          (input)=\"dt.filterGlobal($event.target.value, 'contains')\"\n          placeholder=\"Global Search\"\n        />\n      </div>\n    </ng-template>\n    <ng-template pTemplate=\"header\" let-columns>\n      <tr>\n        <th style=\"width: 30%;\">\n          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>\n        </th>\n        <th style=\"width: 100%; height: 100%;\" *ngFor=\"let col of columns\">\n          {{ col.header }}\n        </th>\n      </tr>\n    </ng-template>\n    <ng-template pTemplate=\"body\" let-data let-columns=\"columns\">\n      <tr>\n        <td style=\"width: 30%;\">\n          <p-tableCheckbox [value]=\"data\"></p-tableCheckbox>\n        </td>\n        <td style=\"width: 50%;\">\n          <i (click)=\"editTableData.emit(data)\" style=\"margin-right: 1rem;\" class=\"cursor-pointer fa fa-pencil\"></i>\n          <i (click)=\"deleteData(data)\" class=\"fa fa-trash cursor-pointer\"></i>\n        </td>\n        <td style=\"width: 100%; height: 100%;\" *ngFor=\"let col of columns\">\n          {{ data[col.field] }}\n        </td>\n      </tr>\n    </ng-template>\n    <ng-template pTemplate=\"paginatorleft\">\n      <div style=\"padding: 1rem;\">\n        <button\n          type=\"button\"\n          pButton\n          icon=\"fa fa-chevron-left\"\n          (click)=\"previousPage()\"\n          style=\"margin-right:.5em\"\n          [disabled]=\"isFirstPage()\"\n        ></button>\n        <button type=\"button\" pButton icon=\"fa fa-refresh\" (click)=\"reset()\" style=\"margin-right:.5em\"></button>\n        <button\n          type=\"button\"\n          pButton\n          icon=\"fa fa-chevron-right\"\n          (click)=\"nextPage()\"\n          [disabled]=\"isLastPage()\"\n        ></button>\n        <p-dropdown (onChange)=\"setRowsPerPage($event)\" [options]=\"rowsPerPageSelection\"></p-dropdown>\n      </div>\n    </ng-template>\n  </p-table>\n</ng-container>\n<ng-template #showErrorMessage>No data available.</ng-template>\n",
+              "styles": [".tableStyleClass{height:100%;width:100%;border:1px solid #000}"]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "dataKey": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 10,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "tableData": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 11,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 12,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "rowsperPage": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 13,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showPagination": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 14,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "rowsPerPageOptions": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 15,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "styleClass": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 16,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "editTableData": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 17,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [
+          {
+            "__symbolic": "constructor",
+            "parameters": [
+              {
+                "__symbolic": "reference",
+                "module": "primeng/api",
+                "name": "ConfirmationService",
+                "line": 29,
+                "character": 43
+              },
+              {
+                "__symbolic": "reference",
+                "module": "primeng/api",
+                "name": "MessageService",
+                "line": 29,
+                "character": 88
+              }
+            ]
+          }
+        ],
+        "ngOnInit": [{ "__symbolic": "method" }],
+        "nextPage": [{ "__symbolic": "method" }],
+        "previousPage": [{ "__symbolic": "method" }],
+        "reset": [{ "__symbolic": "method" }],
+        "isLastPage": [{ "__symbolic": "method" }],
+        "isFirstPage": [{ "__symbolic": "method" }],
+        "setRowsPerPage": [{ "__symbolic": "method" }],
+        "deleteData": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵe": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-search",
+              "template": "<div [ngStyle]=\"stylesClass\" class=\"search-container\">\n  <input\n    [class]=\"isDisabled === true ? 'form-control disabled-class' : 'form-control'\"\n    class=\"input-styles\"\n    [placeholder]=\"placeholder\"\n    type=\"search\"\n    pInputText\n    name=\"searchQuery\"\n    [disabled]=\"isDisabled\"\n    [(ngModel)]=\"searchQuery\"\n    (ngModelChange)=\"handleSearch($event)\"\n    [ngStyle]=\"stylesClass\"\n  />\n  <ul [ngStyle]=\"stylesClass\" *ngIf=\"searchQuery.length > 0\" class=\"cursor-pointer list-container\">\n    <li\n      (click)=\"sendSearchResult(result, result.value)\"\n      class=\"no-bullets list\"\n      style=\"text-transform: capitalize;\"\n      *ngFor=\"let result of searchResults; let i = index\"\n      :key=\"i\"\n    >\n      {{ result.value }}\n    </li>\n  </ul>\n</div>\n",
+              "styles": [
+                ".search-container{width:500px;height:100%;box-sizing:border-box}.input-styles{width:500px}.list-container{position:absolute;background:#fff;padding:0;margin:0;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s;overflow-y:scroll;height:200px;width:500px;z-index:99}.list{list-style:none;padding:.5rem;text-align:left}.list-disabled{color:gray;padding:.5rem;text-align:left}.list:hover{background-color:#dddd;cursor:pointer}.disabled-class{background-color:#d3d3d3}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "isDisabled": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 8,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showDropDown": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 9,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "placeholder": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 10,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "searchArray": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 11,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "stylesClass": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 12,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "selectedSearchResult": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 13,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "handleSearch": [{ "__symbolic": "method" }],
+        "checkSearchResults": [{ "__symbolic": "method" }],
+        "getSearchResults": [{ "__symbolic": "method" }],
+        "sendSearchResult": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵf": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-tab",
+              "template": "<div class=\"container\">\n  <div class=\"tab-container\" *ngFor=\"let item of tabContent; let i = index\">\n    <div (click)=\"setIndex(i)\" [class]=\"currentIndex === i ? 'tabs' : 'not-selected'\">\n      <i style=\"margin-left: 0.3rem;\" [class]=\"item.leftIcon\"></i>\n      <div>{{ item.header }}</div>\n      <i (click)=\"deleteTab(i)\" style=\"margin-right: 0.3rem;\" [class]=\"canDelete ? 'fa fa-times' : ''\"></i>\n    </div>\n    <div class=\"tab-content\" *ngIf=\"currentIndex === i\">\n      <div>{{ item.content }}</div>\n    </div>\n  </div>\n</div>\n",
+              "styles": [
+                ".container{display:-webkit-box;display:flex;height:100%;width:100%;box-sizing:border-box;overflow:hidden}.tab-container{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;overflow:hidden;width:20%;height:20%;box-sizing:border-box}.tabs{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;margin:0 .5rem;background-color:#1b82d7;color:#fff;padding:.3rem;border-radius:6px;cursor:pointer}.not-selected{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;margin:0 .5rem;background-color:#d3d3d3;color:#fff;padding:.3rem;border-radius:6px;cursor:pointer}.tab-content{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;overflow:hidden;text-align:left;word-wrap:break-word;box-sizing:border-box;height:100%;width:100%;margin:.3rem}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "tabContent": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 8,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "canDelete": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 9,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [{ "__symbolic": "constructor" }],
+        "ngOnInit": [{ "__symbolic": "method" }],
+        "setIndex": [{ "__symbolic": "method" }],
+        "deleteTab": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵg": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Directive",
+            "line": 33,
+            "character": 1
+          },
+          "arguments": [{ "selector": "[appDynamicField]" }]
+        }
+      ],
+      "members": {
+        "config": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 37,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "group": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 38,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [
+          {
+            "__symbolic": "constructor",
+            "parameters": [
+              {
+                "__symbolic": "reference",
+                "module": "@angular/core",
+                "name": "ComponentFactoryResolver",
+                "line": 42,
+                "character": 22
+              },
+              {
+                "__symbolic": "reference",
+                "module": "@angular/core",
+                "name": "ViewContainerRef",
+                "line": 43,
+                "character": 23
+              }
+            ]
+          }
+        ],
+        "ngOnChanges": [{ "__symbolic": "method" }],
+        "ngOnInit": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵh": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 10,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "exportAs": "dynamicForm",
+              "selector": "app-dynamic-form",
+              "template": "\n    <form\n      class=\"dynamic-form\"\n      [formGroup]=\"form\"\n      (ngSubmit)=\"handleSubmit($event)\"\n    >\n      <ng-container\n        *ngFor=\"let field of config\"\n        appDynamicField\n        [config]=\"field\"\n        [group]=\"form\"\n      >\n      </ng-container>\n    </form>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {
+        "config": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 30,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "formSubmittedValues": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 31,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [
+          {
+            "__symbolic": "constructor",
+            "parameters": [
+              {
+                "__symbolic": "reference",
+                "module": "@angular/forms",
+                "name": "FormBuilder",
+                "line": 47,
+                "character": 26
+              }
+            ]
+          }
+        ],
+        "ngOnInit": [{ "__symbolic": "method" }],
+        "createGroup": [{ "__symbolic": "method" }],
+        "bindValidations": [{ "__symbolic": "method" }],
+        "handleSubmit": [{ "__symbolic": "method" }],
+        "setDisabled": [{ "__symbolic": "method" }],
+        "validateAllFormFields": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵi": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-button",
+              "template": "\n    <div class=\"dynamic-field form-button\" [formGroup]=\"group\">\n      <button [disabled]=\"config.disabled\" type=\"submit\">\n        {{ config.label }}\n      </button>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵj": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-input",
+              "template": "\n    <div class=\"dynamic-field form-input\" [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <input\n        pInputText\n        [type]=\"config.inputType\"\n        [placeholder]=\"config.placeholder\"\n        [formControlName]=\"config.name\"\n      />\n      <ng-container *ngIf=\"group.controls[this.config.name].touched && group.controls[this.config.name].invalid\">\n        <ng-container *ngFor=\"let validation of config.validations\">\n          <div *ngIf=\"group.get(config.name).hasError(validation.name)\">\n            {{ validation.message }}\n          </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵk": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-select",
+              "template": "\n    <div class=\"dynamic-field form-select\" [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <p-dropdown [formControlName]=\"config.name\" [options]=\"config.options\"></p-dropdown>\n      <ng-container *ngIf=\"group.controls[this.config.name].touched && group.controls[this.config.name].invalid\">\n        <ng-container *ngFor=\"let validation of config.validations\">\n          <div *ngIf=\"group.get(config.name).hasError(validation.name)\">\n            {{ validation.message }}\n          </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵl": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-date-picker",
+              "template": "\n    <div class=\"demo-full-width margin-top\" [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <input\n        [type]=\"config.inputType\"\n        [placeholder]=\"config.placeholder\"\n        [formControlName]=\"config.name\"\n      />\n      <ng-container\n        *ngIf=\"\n          group.controls[this.config.name].touched &&\n          group.controls[this.config.name].invalid\n        \"\n      >\n        <ng-container *ngFor=\"let validation of config.validations\">\n          <div *ngIf=\"group.get(config.name).hasError(validation.name)\">\n            {{ validation.message }}\n          </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵm": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-input",
+              "template": "\n    <div class=\"dynamic-field form-input\" [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <input\n        [type]=\"config.inputType\"\n        [placeholder]=\"config.placeholder\"\n        [formControlName]=\"config.name\"\n        [checked]=\"config.value\"\n      />\n      <ng-container\n        *ngIf=\"\n          group.controls[this.config.name].touched &&\n          group.controls[this.config.name].invalid\n        \"\n      >\n        <ng-container *ngFor=\"let validation of config.validations\">\n          <div *ngIf=\"group.get(config.name).hasError(validation.name)\">\n            {{ validation.message }}\n          </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵn": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-input",
+              "template": "\n    <div class=\"dynamic-field form-input\" [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <input\n        [type]=\"config.inputType\"\n        [placeholder]=\"config.placeholder\"\n        [formControlName]=\"config.name\"\n      />\n      <ng-container *ngFor=\"let validation of config.validations\">\n      <div *ngIf=\"group.get(config.name).hasError(validation.name)\">\n        {{ validation.message }}\n      </div>\n    </ng-container>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵo": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-multi-select",
+              "template": "\n    <div [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <p-multiSelect\n        [formControlName]=\"config.name\"\n        [options]=\"config.options\"\n      ></p-multiSelect>\n      <ng-container\n        *ngIf=\"\n          group.controls[this.config.name].touched &&\n          group.controls[this.config.name].invalid\n        \"\n      >\n        <ng-container *ngFor=\"let validation of config.validations\">\n          <div *ngIf=\"group.get(config.name).hasError(validation.name)\">\n            {{ validation.message }}\n          </div>\n        </ng-container>\n      </ng-container>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵp": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 5,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "app-form-slider",
+              "template": "\n    <div style=\"display: 'flex'; align-items: 'center';\" [formGroup]=\"group\">\n      <label>{{ config.label }}</label>\n      <p-slider [style]=\"{ width: '300px' }\" [formControlName]=\"config.name\"></p-slider>\n    </div>\n  "
+            }
+          ]
+        }
+      ],
+      "members": {}
+    },
+    "ɵq": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 17,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-multi-select",
+              "providers": [
+                {
+                  "provide": {
+                    "__symbolic": "reference",
+                    "module": "@angular/forms",
+                    "name": "NG_VALUE_ACCESSOR",
+                    "line": 23,
+                    "character": 15
+                  },
+                  "useExisting": { "__symbolic": "reference", "name": "ɵq" },
+                  "multi": true
+                }
+              ],
+              "template": "<ng-container>\n  <ng-container *ngIf=\"!preSelectedOption.length; else showSelected\">\n    <button (click)=\"toggleList()\">\n      <div>Choose</div>\n    </button>\n    <i\n      (click)=\"toggleList()\"\n      style=\"color: gray; position: relative; right: 30px;\"\n      class=\"cursor-pointer fa fa-chevron-down\"\n    ></i>\n  </ng-container>\n  <ng-template #showSelected>\n    <div class=\"list-of-selected-itens\">\n      <ng-container *ngIf=\"preSelectedOption.length >= 4; else showItems\">\n        <div class=\"cursor-pointer\" (click)=\"toggleList()\" style=\"width: 250px;\">\n          {{ preSelectedOption.length }} items selected\n        </div>\n        <i\n          (click)=\"toggleList()\"\n          style=\"color: gray; position: relative; right: -5px;\"\n          class=\"cursor-pointer fa fa-chevron-down\"\n        ></i>\n      </ng-container>\n      <ng-template #showItems>\n        <div style=\"width: 200px;\" *ngFor=\"let item of preSelectedOption; let i = index\">\n          <div style=\"border: 1px solid gray; width: 70px; height: auto; margin-right: 3px; padding: 0.1rem 0.1rem;\">\n            <i\n              (click)=\"addRemoveData({ label: item, value: item }, i)\"\n              class=\"fa fa-times cursor-pointer\"\n              style=\"color: gray; position: relative;\"\n            ></i>\n            {{ item }}\n          </div>\n        </div>\n        <i\n          (click)=\"toggleList()\"\n          style=\"color: gray; position: relative;;\"\n          class=\"cursor-pointer fa fa-chevron-down\"\n        ></i>\n      </ng-template>\n    </div>\n  </ng-template>\n  <div *ngIf=\"isListDisplayed\" class=\"list-container\" style=\"display: flex; flex-direction: column\">\n    <div style=\"display: flex; align-items: center; justify-content: center; width: 100%;\">\n      <div style=\"margin-left: 5px;\" (click)=\"onSelectAll(!selectAll)\" style=\"text-align: center;\" class=\"check-box\">\n        <i [class]=\"selectAll ? 'fa fa-check black' : ''\"></i>\n      </div>\n      <input\n        name=\"searchBox\"\n        #searchBox\n        type=\"text\"\n        (input)=\"onSearchFilter(searchBox.value)\"\n        style=\"padding: 0.3rem; margin-left: 5px; margin-right: 10px;\"\n      />\n      <i (click)=\"clearSelectedItemsOnXclick()\" class=\" cursor-pointer fa fa-times\" style=\"color:gray;\"></i>\n    </div>\n    <ul>\n      <li\n        *ngFor=\"let item of listOfValues; let i = index\"\n        [class]=\"\n          currentIndex.includes(i) || preSelectedOption.includes(item.label) || preSelectedOption.includes(item.value)\n            ? 'drop-down'\n            : 'list'\n        \"\n        (click)=\"addRemoveData(item, i)\"\n        style=\"display: flex; align-items: center; cursor: pointer\"\n      >\n        <div style=\"text-align: center;\" class=\"check-box\">\n          <i\n            [class]=\"\n              currentIndex.includes(i) ||\n              preSelectedOption.includes(item.label) ||\n              preSelectedOption.includes(item.value)\n                ? 'fa fa-check black'\n                : ''\n            \"\n          ></i>\n        </div>\n        <div>{{ item.label }}</div>\n      </li>\n    </ul>\n  </div>\n</ng-container>\n",
+              "styles": [
+                "button{padding:.5rem 2rem;margin:.5rem;font-size:1rem;color:gray;border:.1rem solid;border-radius:.5rem;text-transform:uppercase;-webkit-transition:.3s ease-out;transition:.3s ease-out;background-color:transparent;width:260px}button:hover{cursor:pointer}button:active,button:focus{outline:0}.list-of-selected-itens{display:-webkit-box;display:flex;padding:.5rem;margin:.5rem;font-size:1rem;color:gray;border:.1rem solid;border-radius:.5rem;-webkit-transition:.3s ease-out;transition:.3s ease-out;background-color:transparent;width:260px;box-sizing:border-box}.check-box{-webkit-appearance:none;width:25px;height:25px;background:#fff;border-radius:5px;border:2px solid #555;margin-right:10px;margin-bottom:.2rem}.black{color:#000}.list-container{position:absolute;width:260px;background:#fff;padding:0;margin:0;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s;height:250px;overflow-y:scroll}.list{list-style:none;padding:.5rem;text-align:left}.list-disabled{color:gray;padding:.5rem;text-align:left}.list:hover{background-color:#dddD;cursor:pointer}.drop-down{background-color:#007ad9;color:#fff;padding:.5rem;text-align:left}.drop-down:hover{cursor:pointer}.primary{border-color:var(--primary);color:var(--primary)}.primary:active,.primary:hover{background-color:var(--primary);color:#fff}.clear{border:none;color:#000}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "searchBox": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "ViewChild",
+                  "line": 30,
+                  "character": 3
+                },
+                "arguments": [
+                  "searchBox",
+                  {
+                    "read": {
+                      "__symbolic": "reference",
+                      "module": "@angular/core",
+                      "name": "ElementRef",
+                      "line": 30,
+                      "character": 34
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "options": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 31,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "preSelectedOption": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 32,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [
+          {
+            "__symbolic": "constructor",
+            "parameters": [
+              {
+                "__symbolic": "reference",
+                "module": "@angular/core",
+                "name": "ElementRef",
+                "line": 40,
+                "character": 28
+              }
+            ]
+          }
+        ],
+        "writeValue": [{ "__symbolic": "method" }],
+        "registerOnChange": [{ "__symbolic": "method" }],
+        "registerOnTouched": [{ "__symbolic": "method" }],
+        "clickout": [
+          {
+            "__symbolic": "method",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "HostListener",
+                  "line": 59,
+                  "character": 3
+                },
+                "arguments": ["document:click", ["$event"]]
+              }
+            ]
+          }
+        ],
+        "ngOnInit": [{ "__symbolic": "method" }],
+        "checkForPrePopulatedValues": [{ "__symbolic": "method" }],
+        "ngAfterViewChecked": [{ "__symbolic": "method" }],
+        "toggleList": [{ "__symbolic": "method" }],
+        "clearSelectedItemsOnXclick": [{ "__symbolic": "method" }],
+        "onSearchFilter": [{ "__symbolic": "method" }],
+        "callPropagateMethod": [{ "__symbolic": "method" }],
+        "onSelectAll": [{ "__symbolic": "method" }],
+        "addSelectedValues": [{ "__symbolic": "method" }],
+        "removeSelectedValues": [{ "__symbolic": "method" }],
+        "addRemoveData": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵr": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 9,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-split-button",
+              "template": "\n    <div (click)=\"toggleList()\" appCommonHoverDirective (closeList)=\"toggleList()\">\n      <div style=\"width: 'fit-content';\">\n        <i *ngIf=\"showIcon\" [class]=\"icon\" style=\"color: 'white'; position: 'relative'; left: '30px';\"></i>\n        <button [ngStyle]=\"{ 'background-color': backgroundColor }\" [type]=\"buttonType\">\n          {{ buttonText }}\n        </button>\n        <i\n          (click)=\"toggleList()\"\n          style=\"color: 'white'; position: 'relative'; right: '30px';\"\n          class=\"cursor-pointer fa fa-chevron-down\"\n        ></i>\n        <ul *ngIf=\"isListDisplayed; else showNothing\" class=\"list-container\">\n          <ng-container *ngFor=\"let item of listItems\">\n            <li class=\"list-disabled\" *ngIf=\"item.disabled; else addClick\">{{ item.label }}</li>\n            <ng-template #addClick>\n              <li (click)=\"item.command()\" class=\"list\">{{ item.label }}</li>\n            </ng-template>\n          </ng-container>\n        </ul>\n        <ng-template #showNothing></ng-template>\n      </div>\n    </div>\n  ",
+              "styles": [
+                "button{padding:.5rem 2rem;margin:.5rem;font-size:1rem;color:#fff;border:.1rem solid;border-radius:.5rem;text-transform:uppercase;-webkit-transition:.3s ease-out;transition:.3s ease-out;background-color:#00f}button:active,button:focus{outline:0}.divider{width:100%;height:100%}.list-container{position:absolute;width:15%;height:auto;background:#fff;left:30px;padding:0;margin:0;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s}.list{list-style:none;padding:.5rem;text-align:left}.list-disabled{color:gray;padding:.5rem;text-align:left;list-style:none}.list:hover{background-color:#dddD;cursor:pointer}.primary{border-color:var(--primary);color:var(--primary)}.primary:active,.primary:hover{background-color:var(--primary);color:#fff}.clear{border:none;color:#000}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "buttonText": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 38,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showIcon": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 39,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "icon": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 40,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "buttonType": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 41,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "backgroundColor": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 42,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "listItems": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 43,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "toggleList": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵs": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Directive",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [{ "selector": "[appCommonHoverDirective]" }]
+        }
+      ],
+      "members": {
+        "closeList": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 6,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [{ "__symbolic": "constructor" }],
+        "onMouseEnter": [
+          {
+            "__symbolic": "method",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "HostListener",
+                  "line": 10,
+                  "character": 3
+                },
+                "arguments": ["mouseenter"]
+              }
+            ]
+          }
+        ],
+        "onMouseLeave": [
+          {
+            "__symbolic": "method",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "HostListener",
+                  "line": 15,
+                  "character": 3
+                },
+                "arguments": ["mouseleave"]
+              }
+            ]
+          }
+        ],
+        "onClick": [
+          {
+            "__symbolic": "method",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "HostListener",
+                  "line": 20,
+                  "character": 3
+                },
+                "arguments": ["document:click"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ɵt": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-select",
+              "providers": [
+                {
+                  "provide": {
+                    "__symbolic": "reference",
+                    "module": "@angular/forms",
+                    "name": "NG_VALUE_ACCESSOR",
+                    "line": 9,
+                    "character": 15
+                  },
+                  "useExisting": { "__symbolic": "reference", "name": "ɵt" },
+                  "multi": true
+                }
+              ],
+              "template": "<div class=\"select-container\">\n  <div (click)=\"toggleList()\" class=\"dropdown\">\n    <div *ngIf=\"selectedOption; else showDefault\">{{ selectedOption }}</div>\n    <ng-template #showDefault>\n      <div>Choose</div>\n    </ng-template>\n    <i style=\"color: gray; z-index: 99;\" class=\"cursor-pointer fa fa-chevron-down\"></i>\n  </div>\n  <div style=\"border: 1px solid rgb(224, 210, 210); width: 200px; border-width: thin;\"></div>\n  <ul *ngIf=\"isListDisplayed\" class=\"list-container\">\n    <li (click)=\"setOption(option)\" class=\"list\" *ngFor=\"let option of options\">\n      {{ option }}\n    </li>\n  </ul>\n</div>\n",
+              "styles": [
+                ".select-container{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;width:200px;height:100%;box-sizing:border-box}.dropdown{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;padding:.5rem 2rem;margin:.5rem;font-size:1rem;color:gray;border:none;outline:0;text-transform:uppercase;-webkit-transition:.3s ease-out;transition:.3s ease-out;background-color:transparent;width:200px}.dropdown:hover{cursor:pointer}.dropdown:active,.dropdown:focus{outline:0}.list-container{position:absolute;background:#fff;padding:0;margin:0;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s;overflow-y:scroll;height:200px;width:200px;z-index:99}.list{list-style:none;padding:.5rem;text-align:left;width:200px}.list-disabled{color:gray;text-align:left}.list:hover{background-color:#dddd;cursor:pointer}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "options": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 16,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "selectedOption": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 17,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "selectedItem": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 18,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "writeValue": [{ "__symbolic": "method" }],
+        "registerOnChange": [{ "__symbolic": "method" }],
+        "registerOnTouched": [{ "__symbolic": "method" }],
+        "setDisabledState": [{ "__symbolic": "method" }],
+        "setOption": [{ "__symbolic": "method" }],
+        "toggleList": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵu": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-counter",
+              "template": "\n    <button (click)=\"increment()\">+</button>\n    {{ counterValue }}\n    <button (click)=\"decrement()\">-</button>\n  ",
+              "providers": [
+                {
+                  "provide": {
+                    "__symbolic": "reference",
+                    "module": "@angular/forms",
+                    "name": "NG_VALUE_ACCESSOR",
+                    "line": 12,
+                    "character": 15
+                  },
+                  "useExisting": { "__symbolic": "reference", "name": "ɵu" },
+                  "multi": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "_counterValue": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 20,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "writeValue": [{ "__symbolic": "method" }],
+        "registerOnChange": [{ "__symbolic": "method" }],
+        "registerOnTouched": [{ "__symbolic": "method" }],
+        "increment": [{ "__symbolic": "method" }],
+        "decrement": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵv": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Injectable",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [{ "providedIn": "root" }]
+        }
+      ],
+      "members": {},
+      "statics": {
+        "setLocalStorage": {
+          "__symbolic": "function",
+          "parameters": ["key", "value"],
+          "value": {
+            "__symbolic": "call",
+            "expression": {
+              "__symbolic": "select",
+              "expression": { "__symbolic": "reference", "name": "localStorage" },
+              "member": "setItem"
+            },
+            "arguments": [
+              { "__symbolic": "reference", "name": "key" },
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "select",
+                  "expression": { "__symbolic": "reference", "name": "JSON" },
+                  "member": "stringify"
+                },
+                "arguments": [{ "__symbolic": "reference", "name": "value" }]
+              }
+            ]
+          }
+        },
+        "getLocalStorage": {
+          "__symbolic": "function",
+          "parameters": ["key"],
+          "value": {
+            "__symbolic": "call",
+            "expression": {
+              "__symbolic": "select",
+              "expression": { "__symbolic": "reference", "name": "localStorage" },
+              "member": "getItem"
+            },
+            "arguments": [{ "__symbolic": "reference", "name": "key" }]
+          }
+        },
+        "clearLocalStorage": {
+          "__symbolic": "function",
+          "parameters": [],
+          "value": {
+            "__symbolic": "call",
+            "expression": {
+              "__symbolic": "select",
+              "expression": { "__symbolic": "reference", "name": "localStorage" },
+              "member": "clear"
+            }
+          }
+        },
+        "removeItem": {
+          "__symbolic": "function",
+          "parameters": ["key"],
+          "value": {
+            "__symbolic": "call",
+            "expression": {
+              "__symbolic": "select",
+              "expression": { "__symbolic": "reference", "name": "localStorage" },
+              "member": "removeItem"
+            },
+            "arguments": [{ "__symbolic": "reference", "name": "key" }]
+          }
+        },
+        "ɵprov": {}
+      }
+    },
+    "ɵw": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 2,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-slider",
+              "template": "<div style=\"display: flex; flex-direction: column; width: 100%; height: 100%;\">\n  <div>{{ sliderLabel }}: {{ rangeValue }}</div>\n  <input\n    [disabled]=\"isDisabled\"\n    class=\"slider\"\n    pInputText\n    type=\"range\"\n    [min]=\"minMaxRange[0]\"\n    [max]=\"minMaxRange[1]\"\n    [(ngModel)]=\"rangeValue\"\n    (ngModelChange)=\"getRange.emit($event)\"\n  />\n</div>\n",
+              "styles": [
+                ".slider{-webkit-appearance:none;width:100%;height:15px;border-radius:5px;background:#d3d3d3;outline:0;opacity:.7;-webkit-transition:opacity .2s;transition:opacity .2s}.slider:hover{opacity:1}.slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#007ad9;cursor:pointer}.slider::-moz-range-thumb{width:25px;height:25px;border-radius:50%;background:#4caf50;cursor:pointer}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "sliderLabel": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 8,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "minMaxRange": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 9,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "rangeValue": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 10,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "isDisabled": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 11,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "getRange": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 12,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ɵx": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-paginator",
+              "template": "<footer>\n  <common-select\n    (selectedItem)=\"getSelectedOption($event)\"\n    [options]=\"options\"\n    name=\"tableRows\"\n    [(ngModel)]=\"rowsPerPage\"\n  ></common-select>\n  <div\n    style=\"display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1rem; padding: 1rem;\"\n  >\n    <div style=\"width: 100px; color: rgba(0,0,0,.26);\">{{ page }} - {{ rowsPerPage }} of {{ data.length }}</div>\n    <button\n      [disabled]=\"page === 1 || rowsPerPage > data.length\"\n      style=\"font-size: 1.5rem; margin-right: 1rem;\"\n      class=\"fa fa-angle-double-left\"\n      (click)=\"resetPaginator()\"\n    ></button>\n    <button\n      [disabled]=\"page === 1 || rowsPerPage > data.length\"\n      (click)=\"previousPage()\"\n      style=\"font-size: 1.5rem; margin-right: 1rem;\"\n      class=\"fa fa-angle-left\"\n    ></button>\n    <button\n      [disabled]=\"rowsPerPage === data.length || rowsPerPage > data.length\"\n      (click)=\"nextPage()\"\n      style=\"font-size: 1.5rem; margin-right: 1rem;\"\n      class=\"fa fa-angle-right\"\n    ></button>\n    <button\n      [disabled]=\"rowsPerPage > data.length\"\n      (click)=\"goToLastPage()\"\n      style=\"font-size: 1.5rem;\"\n      class=\"fa fa-angle-double-right\"\n    ></button>\n  </div>\n</footer>\n",
+              "styles": [
+                "button{background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:0}footer{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;height:100%;width:100%}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "options": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 9,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [{ "__symbolic": "constructor", "parameters": [{ "__symbolic": "reference", "name": "ɵy" }] }],
+        "ngOnInit": [{ "__symbolic": "method" }],
+        "getSelectedOption": [{ "__symbolic": "method" }],
+        "nextPage": [{ "__symbolic": "method" }],
+        "previousPage": [{ "__symbolic": "method" }],
+        "resetPaginator": [{ "__symbolic": "method" }],
+        "calculateendOfPages": [{ "__symbolic": "method" }],
+        "goToLastPage": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵy": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Injectable",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [{ "providedIn": "root" }]
+        }
+      ],
+      "members": { "changeState": [{ "__symbolic": "method" }] },
+      "statics": { "ɵprov": {} }
+    },
+    "ɵz": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "NgModule",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [{ "providers": [{ "__symbolic": "reference", "name": "ɵy" }] }]
+        }
+      ],
+      "members": {}
+    },
+    "ɵba": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 4,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-table-2",
+              "template": "<div style=\"box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2); transition: 0.3s;\">\n  <table class=\"table-container\">\n    <tr>\n      <th>\n        <div (click)=\"toggleSelectAll()\" [class]=\"isSelectAll ? 'all-selected' : ''\" class=\"check-box cursor-pointer\">\n          <i [class]=\"isSelectAll ? 'fa fa-check white-check' : ''\"></i>\n        </div>\n      </th>\n      <th *ngFor=\"let headers of tableHeaders\" :key=\"headers.name\">\n        <span (click)=\"handleSort(headers.prop)\" class=\"cursor-pointer\">\n          <i\n            *ngIf=\"selectedHeader === headers.prop; else showDefault\"\n            [class]=\"\n              sortDirection === 'ASC'\n                ? 'cursor-pointer fa fa-chevron-up'\n                : sortDirection === 'DESC'\n                ? 'cursor-pointer fa fa-chevron-down'\n                : ''\n            \"\n          ></i>\n          <ng-template #showDefault>\n            <i\n              *ngIf=\"headers.prop === tableHeaders[0].prop\"\n              [class]=\"\n                sortDirection === 'ASC'\n                  ? 'cursor-pointer fa fa-chevron-up'\n                  : sortDirection === 'DESC'\n                  ? 'cursor-pointer fa fa-chevron-down'\n                  : ''\n              \"\n            ></i>\n          </ng-template>\n          {{ headers.name }}\n        </span>\n      </th>\n      <th *ngIf=\"showEditOption\"></th>\n      <th *ngIf=\"showDeleteOption\"></th>\n    </tr>\n    <tr\n      (click)=\"getRowData(data, i)\"\n      [class]=\"selectedRowIndex.includes(i) || isSelectAll ? 'active' : ''\"\n      *ngFor=\"let data of tableData; let i = index\"\n      :key=\"dataKey\"\n    >\n      <td>\n        <div\n          style=\"display: flex; align-items: center;\"\n          [class]=\"isSelectAll || selectedRowIndex.includes(i) ? 'all-selected' : ''\"\n          class=\"check-box cursor-pointer\"\n        >\n          <i [class]=\"isSelectAll || selectedRowIndex.includes(i) ? 'fa fa-check white-check' : ''\"></i>\n        </div>\n      </td>\n      <td *ngFor=\"let headers of tableHeaders\" :key=\"headers.name\">\n        {{ data[headers.prop] }}\n      </td>\n      <td *ngIf=\"showEditOption\">\n        <div style=\"display: flex; justify-content: space-around;\">\n          <i (click)=\"getDataToEdit(data)\" class=\"cursor-pointer edit-icon fa fa-edit\"></i>\n        </div>\n      </td>\n      <td *ngIf=\"showDeleteOption\">\n        <div style=\"display: flex; justify-content: space-around;\">\n          <i (click)=\"getDataToDelete(data)\" class=\"cursor-pointer trash-icon fa fa-trash\"></i>\n        </div>\n      </td>\n    </tr>\n  </table>\n\n  <common-paginator [options]=\"numberOfRowsToDisplay\"></common-paginator>\n</div>\n",
+              "styles": [
+                "button{background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:0}.fa-chevron-down,.fa-chevron-up{color:rgba(0,0,0,.26)}.table-container{height:100%;width:100%;display:table;table-layout:fixed;border-collapse:collapse}.active{background-color:#007ad9}th{text-align:left;-webkit-transition:.3s;transition:.3s;padding:1rem;border-bottom:1px solid #dbd7d7}td{text-align:left;padding:1rem;-webkit-transition:.3s;transition:.3s;border-bottom:1px solid #dbd7d7;cursor:pointer}.white-check{color:#fff}.check-box{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-appearance:none;width:25px;height:25px;background:#fff;border-radius:5px;border:2px solid #555;margin-right:10px;margin-bottom:.2rem}.all-selected{-webkit-appearance:none;width:25px;height:25px;border-radius:5px;border:2px solid #555;margin-right:10px;margin-bottom:.2rem;background-color:#007ad9}.edit-icon{color:#00f}.trash-icon{color:red}footer{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;height:100%;width:100%}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "tableData": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 10,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "dataKey": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 11,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "tableHeaders": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 12,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showEditOption": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 13,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "showDeleteOption": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 14,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "rowsPerPage": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 15,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "selectedRowData": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 16,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "dataToEdit": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 17,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "dataToDelete": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Output",
+                  "line": 18,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "__ctor__": [{ "__symbolic": "constructor", "parameters": [{ "__symbolic": "reference", "name": "ɵy" }] }],
+        "ngOnInit": [{ "__symbolic": "method" }],
+        "handlePaginatorService": [{ "__symbolic": "method" }],
+        "setSortDirection": [{ "__symbolic": "method" }],
+        "handleSort": [{ "__symbolic": "method" }],
+        "checkIfSelectedItemsAreInArray": [{ "__symbolic": "method" }],
+        "getRowData": [{ "__symbolic": "method" }],
+        "addSelectedValues": [{ "__symbolic": "method" }],
+        "removeSelectedValues": [{ "__symbolic": "method" }],
+        "getDataToEdit": [{ "__symbolic": "method" }],
+        "getDataToDelete": [{ "__symbolic": "method" }],
+        "toggleSelectAll": [{ "__symbolic": "method" }]
+      }
+    },
+    "ɵbb": {
+      "__symbolic": "class",
+      "decorators": [
+        {
+          "__symbolic": "call",
+          "expression": {
+            "__symbolic": "reference",
+            "module": "@angular/core",
+            "name": "Component",
+            "line": 3,
+            "character": 1
+          },
+          "arguments": [
+            {
+              "selector": "common-side-bar",
+              "template": "\n    <div\n      *ngIf=\"isSideBarOpen\"\n      [@slideInOut]\n      [ngStyle]=\"{ right: position === 'right' ? 0 : '', left: position === 'left' ? 0 : '' }\"\n      class=\"side-bar\"\n    >\n      <div class=\"icon\">\n        <div (click)=\"toggleSideBar()\" class=\"times-icon fa fa-times cursor-pointer\"></div>\n      </div>\n      <ng-content></ng-content>\n    </div>\n    <div [class.is-overlay]=\"isSideBarOpen\"></div>\n  ",
+              "animations": [
+                {
+                  "__symbolic": "call",
+                  "expression": {
+                    "__symbolic": "reference",
+                    "module": "@angular/animations",
+                    "name": "trigger",
+                    "line": 21,
+                    "character": 4
+                  },
+                  "arguments": [
+                    "slideInOut",
+                    [
+                      {
+                        "__symbolic": "call",
+                        "expression": {
+                          "__symbolic": "reference",
+                          "module": "@angular/animations",
+                          "name": "transition",
+                          "line": 22,
+                          "character": 6
+                        },
+                        "arguments": [
+                          "void => *",
+                          [
+                            {
+                              "__symbolic": "call",
+                              "expression": {
+                                "__symbolic": "reference",
+                                "module": "@angular/animations",
+                                "name": "style",
+                                "line": 22,
+                                "character": 31
+                              },
+                              "arguments": [{ "transform": "translateX(-100%)" }]
+                            },
+                            {
+                              "__symbolic": "call",
+                              "expression": {
+                                "__symbolic": "reference",
+                                "module": "@angular/animations",
+                                "name": "animate",
+                                "line": 22,
+                                "character": 74
+                              },
+                              "arguments": ["200ms"]
+                            }
+                          ]
+                        ]
+                      },
+                      {
+                        "__symbolic": "call",
+                        "expression": {
+                          "__symbolic": "reference",
+                          "module": "@angular/animations",
+                          "name": "transition",
+                          "line": 23,
+                          "character": 6
+                        },
+                        "arguments": [
+                          "* => void",
+                          [
+                            {
+                              "__symbolic": "call",
+                              "expression": {
+                                "__symbolic": "reference",
+                                "module": "@angular/animations",
+                                "name": "animate",
+                                "line": 23,
+                                "character": 31
+                              },
+                              "arguments": [
+                                "200ms",
+                                {
+                                  "__symbolic": "call",
+                                  "expression": {
+                                    "__symbolic": "reference",
+                                    "module": "@angular/animations",
+                                    "name": "style",
+                                    "line": 23,
+                                    "character": 48
+                                  },
+                                  "arguments": [{ "transform": "translateX(-500px)" }]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    ]
+                  ]
+                }
+              ],
+              "styles": [
+                ".side-bar{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;position:fixed;top:0;bottom:0;background:#fff;padding:0;margin:0;box-shadow:0 4px 8px 0 rgba(0,0,0,.2);-webkit-transition:.3s;transition:.3s;overflow-y:scroll;width:500px;z-index:2}.icon{display:-webkit-box;display:flex;-webkit-box-pack:end;justify-content:flex-end;margin-right:1rem;padding:1rem;z-index:3}.times-icon{color:red;z-index:4;cursor:pointer}.is-overlay{position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.6);z-index:1}"
+              ]
+            }
+          ]
+        }
+      ],
+      "members": {
+        "isSideBarOpen": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 28,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "position": [
+          {
+            "__symbolic": "property",
+            "decorators": [
+              {
+                "__symbolic": "call",
+                "expression": {
+                  "__symbolic": "reference",
+                  "module": "@angular/core",
+                  "name": "Input",
+                  "line": 29,
+                  "character": 3
+                }
+              }
+            ]
+          }
+        ],
+        "toggleSideBar": [{ "__symbolic": "method" }]
+      }
+    }
+  },
+  "origins": {
+    "PrimeNgModule": "./PrimeNgModules.module",
+    "CommonButtonModule": "./common-button/common-button.module",
+    "CommonModalModule": "./common-modal/common-modal.module",
+    "CommonCardModule": "./common-card/common-card.module",
+    "CommonTableModule": "./common-table/common-table.module",
+    "CommonSearchModule": "./common-auto-complete/common-search.module",
+    "CommonTabModule": "./common-tab/common-tab.module",
+    "DynamicFormModule": "./common-reactive-form/common-reactive-form.module",
+    "CommonMultiSelectModule": "./common-multi-select/common-multi-select.module",
+    "CommonSplitButtonModule": "./common-split-button/common-split-button.module",
+    "CommonSelectModule": "./common-select/common-select.module",
+    "CommonCounterModule": "./counter-componenet/counter.component.module",
+    "LocalStorageModule": "./services/localStorage/localStorage.module",
+    "CommonSliderModule": "./common-slider/common-slider.module",
+    "CommonTableTwoModule": "./common-table-2/common-table-2.module",
+    "CommonPaginatorModule": "./common-paginator/common-paginator.module",
+    "CommonSideBarModule": "./common-side-bar/common-side-bar.module",
+    "ɵa": "./common-button/common-button.component",
+    "ɵb": "./common-modal/common-modal.component",
+    "ɵc": "./common-card/common-card.component",
+    "ɵd": "./common-table/common-table.component",
+    "ɵe": "./common-auto-complete/common-search.component",
+    "ɵf": "./common-tab/common-tab.component",
+    "ɵg": "./common-reactive-form/dynamic-field.directive",
+    "ɵh": "./common-reactive-form/dynamic-form/dynamic-form.component",
+    "ɵi": "./common-reactive-form/Components/form-button/form-button.component",
+    "ɵj": "./common-reactive-form/Components/form-input/form-input.component",
+    "ɵk": "./common-reactive-form/Components/form-select/form-select.component",
+    "ɵl": "./common-reactive-form/Components/form-date-picker/form-date-picker.component",
+    "ɵm": "./common-reactive-form/Components/form-checkbox/form-checkbox.component",
+    "ɵn": "./common-reactive-form/Components/form-radio/form-radio.component",
+    "ɵo": "./common-reactive-form/Components/form-multi-select/form-multi-select.component",
+    "ɵp": "./common-reactive-form/Components/form-slider/form-slider.component",
+    "ɵq": "./common-multi-select/common-multi-select.component",
+    "ɵr": "./common-split-button/common-split-button.component",
+    "ɵs": "./common-split-button/hover.directive",
+    "ɵt": "./common-select/common-select.component",
+    "ɵu": "./counter-componenet/common-counter.component",
+    "ɵv": "./services/localStorage/localStorage.service",
+    "ɵw": "./common-slider/common-slider.component",
+    "ɵx": "./common-paginator/common-paginator.component",
+    "ɵy": "./services/paginatorPubSubService/paginatorPubSub.service",
+    "ɵz": "./services/paginatorPubSubService/paginatorPubSub.module",
+    "ɵba": "./common-table-2/common-table-2.component",
+    "ɵbb": "./common-side-bar/common-sideBar.component"
+  },
+  "importAs": "angular-common-components"
+}

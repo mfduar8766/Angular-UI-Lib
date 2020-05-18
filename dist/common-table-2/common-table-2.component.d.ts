@@ -1,0 +1,33 @@
+import { OnInit, EventEmitter } from '@angular/core';
+import { IHeaders } from './table-utils';
+import { PaginatorPubSubService } from '../services/paginatorPubSubService/paginatorPubSub.service';
+export declare class CommonTableTwoComponent implements OnInit {
+  private paginatorService;
+  tableData: any[];
+  dataKey: string;
+  tableHeaders: IHeaders[];
+  showEditOption: boolean;
+  showDeleteOption: boolean;
+  rowsPerPage: number;
+  selectedRowData: EventEmitter<any>;
+  dataToEdit: EventEmitter<any>;
+  dataToDelete: EventEmitter<any>;
+  sortDirection: string;
+  selectedHeader: any;
+  numberOfRowsToDisplay: number[];
+  isSelectAll: boolean;
+  selectedRows: any[];
+  selectedRowIndex: number[];
+  constructor(paginatorService: PaginatorPubSubService);
+  ngOnInit(): void;
+  handlePaginatorService(originalState: any[], tableDataCopy: any[]): void;
+  setSortDirection(): string;
+  handleSort(header: string): any[];
+  checkIfSelectedItemsAreInArray(data: any): boolean;
+  getRowData(data: any, index: number): void;
+  addSelectedValues(data: any, index: number): void;
+  removeSelectedValues(data: any, index: number): void;
+  getDataToEdit(data: any): void;
+  getDataToDelete(data: any): void;
+  toggleSelectAll(): void;
+}

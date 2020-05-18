@@ -1,0 +1,18 @@
+import { __decorate } from 'tslib';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CommonTabComponent } from './common-tab.component';
+import { PrimeNgModule } from '../PrimeNgModules.module';
+let CommonTabModule = class CommonTabModule {};
+CommonTabModule = __decorate(
+  [
+    NgModule({
+      imports: [CommonModule, PrimeNgModule],
+      declarations: [CommonTabComponent],
+      exports: [CommonTabComponent]
+    })
+  ],
+  CommonTabModule
+);
+export { CommonTabModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tbW9uLXRhYi5tb2R1bGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9hbmd1bGFyLWNvbW1vbi1jb21wb25lbnRzLyIsInNvdXJjZXMiOlsiY29tbW9uLXRhYi9jb21tb24tdGFiLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLGtCQUFrQixFQUFFLE1BQU0sd0JBQXdCLENBQUM7QUFDNUQsT0FBTyxFQUFFLGFBQWEsRUFBRSxNQUFNLDBCQUEwQixDQUFDO0FBT3pELElBQWEsZUFBZSxHQUE1QixNQUFhLGVBQWU7Q0FBRyxDQUFBO0FBQWxCLGVBQWU7SUFMM0IsUUFBUSxDQUFDO1FBQ1IsT0FBTyxFQUFFLENBQUMsWUFBWSxFQUFFLGFBQWEsQ0FBQztRQUN0QyxZQUFZLEVBQUUsQ0FBQyxrQkFBa0IsQ0FBQztRQUNsQyxPQUFPLEVBQUUsQ0FBQyxrQkFBa0IsQ0FBQztLQUM5QixDQUFDO0dBQ1csZUFBZSxDQUFHO1NBQWxCLGVBQWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgQ29tbW9uTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29tbW9uJztcbmltcG9ydCB7IENvbW1vblRhYkNvbXBvbmVudCB9IGZyb20gJy4vY29tbW9uLXRhYi5jb21wb25lbnQnO1xuaW1wb3J0IHsgUHJpbWVOZ01vZHVsZSB9IGZyb20gJy4uL1ByaW1lTmdNb2R1bGVzLm1vZHVsZSc7XG5cbkBOZ01vZHVsZSh7XG4gIGltcG9ydHM6IFtDb21tb25Nb2R1bGUsIFByaW1lTmdNb2R1bGVdLFxuICBkZWNsYXJhdGlvbnM6IFtDb21tb25UYWJDb21wb25lbnRdLFxuICBleHBvcnRzOiBbQ29tbW9uVGFiQ29tcG9uZW50XVxufSlcbmV4cG9ydCBjbGFzcyBDb21tb25UYWJNb2R1bGUge31cbiJdfQ==

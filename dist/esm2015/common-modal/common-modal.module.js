@@ -1,0 +1,17 @@
+import { __decorate } from 'tslib';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CommonModalComponent } from './common-modal.component';
+let CommonModalModule = class CommonModalModule {};
+CommonModalModule = __decorate(
+  [
+    NgModule({
+      imports: [CommonModule],
+      declarations: [CommonModalComponent],
+      exports: [CommonModalComponent]
+    })
+  ],
+  CommonModalModule
+);
+export { CommonModalModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tbW9uLW1vZGFsLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2FuZ3VsYXItY29tbW9uLWNvbXBvbmVudHMvIiwic291cmNlcyI6WyJjb21tb24tbW9kYWwvY29tbW9uLW1vZGFsLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLG9CQUFvQixFQUFFLE1BQU0sMEJBQTBCLENBQUM7QUFPaEUsSUFBYSxpQkFBaUIsR0FBOUIsTUFBYSxpQkFBaUI7Q0FBRyxDQUFBO0FBQXBCLGlCQUFpQjtJQUw3QixRQUFRLENBQUM7UUFDUixPQUFPLEVBQUUsQ0FBQyxZQUFZLENBQUM7UUFDdkIsWUFBWSxFQUFFLENBQUMsb0JBQW9CLENBQUM7UUFDcEMsT0FBTyxFQUFFLENBQUMsb0JBQW9CLENBQUM7S0FDaEMsQ0FBQztHQUNXLGlCQUFpQixDQUFHO1NBQXBCLGlCQUFpQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xuaW1wb3J0IHsgQ29tbW9uTW9kYWxDb21wb25lbnQgfSBmcm9tICcuL2NvbW1vbi1tb2RhbC5jb21wb25lbnQnO1xuXG5ATmdNb2R1bGUoe1xuICBpbXBvcnRzOiBbQ29tbW9uTW9kdWxlXSxcbiAgZGVjbGFyYXRpb25zOiBbQ29tbW9uTW9kYWxDb21wb25lbnRdLFxuICBleHBvcnRzOiBbQ29tbW9uTW9kYWxDb21wb25lbnRdXG59KVxuZXhwb3J0IGNsYXNzIENvbW1vbk1vZGFsTW9kdWxlIHt9XG4iXX0=
