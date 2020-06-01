@@ -14,12 +14,12 @@ export class CommonTableTwoComponent implements OnInit {
   @Input() showEditOption: boolean;
   @Input() showDeleteOption: boolean;
   @Input() rowsPerPage = 5;
+  @Input() rowsPerPageOptions = [5, 10, 15, 20, 25];
   @Output() selectedRowData: EventEmitter<any> = new EventEmitter();
   @Output() dataToEdit: EventEmitter<any> = new EventEmitter();
   @Output() dataToDelete: EventEmitter<any> = new EventEmitter();
   sortDirection = 'ASC';
   selectedHeader = null;
-  numberOfRowsToDisplay = [5, 10, 15, 20, 25];
   isSelectAll = false;
   selectedRows: any[] = [];
   selectedRowIndex: number[] = [];
@@ -27,21 +27,18 @@ export class CommonTableTwoComponent implements OnInit {
   constructor(private paginatorService: PaginatorPubSubService) {}
 
   ngOnInit() {
-    const originalState = this.tableData.slice(0, this.rowsPerPage);
-    const tableDataCopy = this.tableData;
+    const originalTableState = this.tableData;
+    this.handlePaginatorService(originalTableState);
     this.tableData = this.tableData.slice(0, this.rowsPerPage);
-    this.handlePaginatorService(originalState, tableDataCopy);
   }
 
-  handlePaginatorService(originalState: any[], tableDataCopy: any[]) {
+  handlePaginatorService(originalTableState: any[]) {
     this.paginatorService.changeState({
       rowsPerPage: this.rowsPerPage,
-      tableData: this.tableData,
-      data: tableDataCopy,
-      page: 1,
-      tableDataOriginalState: originalState
+      tableData: originalTableState
     });
     this.paginatorService.state.subscribe(data => {
+      console.log('DATA', data);
       (this.rowsPerPage = data.rowsPerPage), (this.tableData = data.tableData);
     });
   }

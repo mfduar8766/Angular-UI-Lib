@@ -5,19 +5,13 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 export class PaginatorPubSubService {
   private state$ = new BehaviorSubject<any>({
     rowsPerPage: null,
-    tableData: [],
-    data: [],
-    page: null,
-    tableDataOriginalState: []
+    tableData: []
   });
 
   changeState(value) {
     this.state$.next({
       rowsPerPage: value.rowsPerPage,
-      tableData: value.tableData,
-      data: value.data,
-      page: value.page,
-      tableDataOriginalState: value.tableDataOriginalState
+      tableData: value.tableData
     });
   }
 

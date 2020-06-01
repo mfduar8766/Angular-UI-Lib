@@ -1,14 +1,42 @@
 <footer>
   <common-select
     (selectedItem)="getSelectedOption($event)"
-    [options]="options"
+    [options]="rowsPerPageOptions"
     name="tableRows"
     [(ngModel)]="rowsPerPage"
   ></common-select>
   <div
     style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1rem; padding: 1rem;"
   >
-    <div style="width: 100px; color: rgba(0,0,0,.26);">{{ page }} - {{ rowsPerPage }} of {{ data.length }}</div>
+    <button
+      [disabled]="currentPage <= pagesArray[0]"
+      style="font-size: 1.5rem;"
+      class="fa fa-angle-double-left"
+      (click)="resetPaginator()"
+    ></button>
+    <button
+      [disabled]="currentPage <= pagesArray[0]"
+      (click)="previousPage()"
+      style="font-size: 1.5rem; margin-right: 1rem;"
+      class="fa fa-angle-left"
+    ></button>
+    <div *ngFor="let page of pagesArray">
+      <div (click)="changePage(page)" [class.is-current-page]="currentPage === page" class="pages">{{ page }}</div>
+    </div>
+    <button
+      [disabled]="currentPage === pagesArray.length - 1"
+      (click)="nextPage()"
+      style="font-size: 1.5rem;"
+      class="fa fa-angle-right"
+    ></button>
+    <button
+      [disabled]="currentPage === pagesArray.length - 1"
+      (click)="goToLastPage()"
+      style="font-size: 1.5rem;"
+      class="fa fa-angle-double-right"
+    ></button>
+
+    <!-- <div style="width: 100px; color: rgba(0,0,0,.26);">{{ page }} - {{ rowsPerPage }} of {{ data.length }}</div>
     <button
       [disabled]="page === 1 || rowsPerPage > data.length"
       style="font-size: 1.5rem; margin-right: 1rem;"
@@ -32,6 +60,6 @@
       (click)="goToLastPage()"
       style="font-size: 1.5rem;"
       class="fa fa-angle-double-right"
-    ></button>
+    ></button> -->
   </div>
 </footer>
