@@ -1,76 +1,98 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ConfirmationService } from 'primeng/api';
-import { MessageService } from 'primeng/api';
+import { ASC, handleAscSort, DESC, handleDescSort, IHeaders } from './table-utils';
+import { PaginatorPubSubService } from '../services/paginatorPubSubService/paginatorPubSub.service';
 
 @Component({
   selector: 'common-table',
   templateUrl: './common-table.component.html',
   styleUrls: ['./common-table.component.scss']
 })
-export class CommonTableComponent implements OnInit {
-  @Input() dataKey: string;
+export class CommonTableTwoComponent implements OnInit {
   @Input() tableData: any[];
-  @Input() columns: any[];
-  @Input() rowsperPage = 5;
-  @Input() showPagination = true;
-  @Input() rowsPerPageOptions: number[] = [5, 10, 25, 50, 100];
-  @Input() styleClass: string;
-  @Output() editTableData: EventEmitter<any> = new EventEmitter();
-  showDeleteMessage: boolean;
-  selectedData: any[];
-  totalRecords: number;
-  first = 0;
-  rowsPerPageSelection = [
-    { label: 5, value: 5 },
-    { label: 10, value: 10 },
-    { label: 25, value: 25 },
-    { label: 100, value: 100 }
-  ];
+  @Input() dataKey: string;
+  @Input() tableHeaders: IHeaders[];
+  @Input() showEditOption: boolean;
+  @Input() showDeleteOption: boolean;
+  @Input() rowsPerPage = 5;
+  @Input() rowsPerPageOptions = [5, 10, 15, 20, 25];
+  @Output() selectedRowData: EventEmitter<any> = new EventEmitter();
+  @Output() dataToEdit: EventEmitter<any> = new EventEmitter();
+  @Output() dataToDelete: EventEmitter<any> = new EventEmitter();
+  sortDirection = 'ASC';
+  selectedHeader = null;
+  isSelectAll = false;
+  selectAllContainer: Map<number, any> = new Map();
+  selectedRow: Map<number, any> = new Map();
+  page = 0;
 
-  constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {}
+  constructor(private paginatorService: PaginatorPubSubService) {}
 
-  ngOnInit(): void {
-    if (this.tableData && this.tableData.length) {
-      this.totalRecords = this.tableData.length;
+  ngOnInit() {
+    const originalTableState = this.tableData;
+    this.handlePaginatorService(originalTableState);
+    this.tableData = this.tableData.slice(0, this.rowsPerPage);
+  }
+
+  handlePaginatorService(originalTableState: any[]) {
+    this.paginatorService.changeState({
+      rowsPerPage: this.rowsPerPage,
+      tableData: originalTableState
+    });
+    this.paginatorService.state.subscribe(data => {
+      this.tableData = data.tableData;
+      this.rowsPerPage = data.rowsPerPage;
+      this.page = data.page || 0;
+    });
+  }
+
+  setSortDirection(): string {
+    if (this.sortDirection === 'ASC') {
+      this.sortDirection = 'DESC';
+      return this.sortDirection;
+    }
+    if (this.sortDirection === 'DESC') {
+      this.sortDirection = 'ASC';
+      return this.sortDirection;
     }
   }
 
-  nextPage() {
-    this.first = this.first + this.rowsperPage;
+  handleSort(header: string): any[] {
+    this.setSortDirection();
+    this.selectedHeader = header;
+    switch (this.sortDirection) {
+      case ASC:
+        return (this.tableData = handleAscSort(this.tableData, header));
+      case DESC:
+        return (this.tableData = handleDescSort(this.tableData, header));
+      default:
+        return this.tableData;
+    }
   }
 
-  previousPage() {
-    this.first = this.first - this.rowsperPage;
+  getRowData(data: any) {
+    if (!this.selectedRow.has(data[this.dataKey])) {
+      this.selectedRow.set(data[this.dataKey], data);
+    } else if (this.selectedRow.has(data[this.dataKey])) {
+      this.selectedRow.delete(data[this.dataKey]);
+    }
   }
 
-  reset() {
-    this.first = 0;
+  getDataToEdit(data: any) {
+    this.dataToEdit.emit(data);
   }
 
-  isLastPage(): boolean {
-    return this.first === this.tableData.length - this.rowsperPage;
+  getDataToDelete(data: any) {
+    this.dataToDelete.emit(data);
   }
 
-  isFirstPage(): boolean {
-    return this.first === 0;
-  }
-
-  setRowsPerPage(event) {
-    this.rowsperPage = event.value;
-  }
-
-  deleteData(data) {
-    this.confirmationService.confirm({
-      message: 'Do you want to delete this record?',
-      header: 'Delete Record',
-      icon: 'fa fa-info-circle',
-      accept: () => {
-        this.tableData = this.tableData.filter(dataValue => dataValue.agencyId !== data.agencyId);
-        this.messageService.add({ severity: 'success', key: 'deleteSuccess', summary: 'Record deleted.' });
-      },
-      reject: () => {
-        return;
+  toggleSelectAll() {
+    this.isSelectAll = !this.isSelectAll;
+    if (this.isSelectAll) {
+      if (!this.selectAllContainer.has(this.page)) {
+        this.selectAllContainer.set(this.page, this.tableData);
       }
-    });
+    } else {
+      this.selectAllContainer.delete(this.page);
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { chunckArray } from '../common-table-2/table-utils';
+import { chunckArray } from '../common-table/table-utils';
 import { PaginatorPubSubService } from '../services/paginatorPubSubService/paginatorPubSub.service';
 
 @Component({
@@ -51,17 +51,10 @@ export class CommonPaginatorComponent implements OnInit {
 
   getSelectedOption(rowsPerPage: number) {
     this.rowsPerPage = rowsPerPage;
-    // this.changePage(this.currentPage);
-
-    // this.rowsPerPage = data;
-    // this.tableData = this.data.slice(0, data);
-    // this.paginatorService.changeState({
-    //   rowsPerPage: this.rowsPerPage,
-    //   tableData: this.tableData,
-    //   data: this.data,
-    //   page: this.page,
-    //   tableDataOriginalState: this.tableDataOriginalState
-    // });
+    this.rowsPerPageCollection = {};
+    this.setRowsPerPageCollection();
+    this.calculateTotalPages();
+    this.changePage(this.currentPage);
   }
 
   nextPage() {
@@ -92,7 +85,8 @@ export class CommonPaginatorComponent implements OnInit {
     this.currentPage = page;
     this.paginatorService.changeState({
       rowsPerPage: this.rowsPerPage,
-      tableData: this.rowsPerPageCollection[page]
+      tableData: this.rowsPerPageCollection[page],
+      page: this.currentPage
     });
   }
 }

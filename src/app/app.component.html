@@ -241,7 +241,7 @@
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
 
-  <common-card
+  <!-- <common-card
     [headerStyles]="{
       'background-color': 'blue',
       color: 'white',
@@ -271,7 +271,7 @@
     </form>
     <pre>{{ form.value | json }}</pre>
     <p>Reactive Form Value: {{ outerCounterValue }}</p>
-  </common-card>
+  </common-card> -->
 
   <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
 
@@ -319,7 +319,7 @@
       (selectedSearchResult)="getSelectedResults($event)"
     ></common-search>
     <div style="margin-top: 1rem;"></div>
-    <common-table-2
+    <common-table
       [dataKey]="'agencyId'"
       [tableData]="tableData"
       [tableHeaders]="tableHeaders2"
@@ -328,6 +328,6 @@
       (dataToDelete)="getDataToDelete($event)"
       [showEditOption]="false"
       [showDeleteOption]="false"
-    ></common-table-2>
+    ></common-table>
   </common-card>
 </div>
