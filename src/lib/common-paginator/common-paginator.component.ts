@@ -9,6 +9,7 @@ import { PaginatorPubSubService } from '../services/paginatorPubSubService/pagin
 })
 export class CommonPaginatorComponent implements OnInit {
   @Input() rowsPerPageOptions: number[];
+  @Input() originalTableState: any[];
   rowsPerPage = 5;
   tableData: any[] = [];
   pagesArray: number[] = [];
@@ -18,8 +19,9 @@ export class CommonPaginatorComponent implements OnInit {
   constructor(private paginatorService: PaginatorPubSubService) {}
 
   ngOnInit() {
+    this.tableData = this.originalTableState;
     this.paginatorService.state.subscribe(data => {
-      (this.rowsPerPage = data.rowsPerPage), (this.tableData = data.tableData);
+      this.rowsPerPage = data.rowsPerPage;
     });
     this.calculateTotalPages();
     this.setRowsPerPageCollection();
@@ -52,8 +54,8 @@ export class CommonPaginatorComponent implements OnInit {
   getSelectedOption(rowsPerPage: number) {
     this.rowsPerPage = rowsPerPage;
     this.rowsPerPageCollection = {};
-    this.setRowsPerPageCollection();
     this.calculateTotalPages();
+    this.setRowsPerPageCollection();
     this.changePage(this.currentPage);
   }
 

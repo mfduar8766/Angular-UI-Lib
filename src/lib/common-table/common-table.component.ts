@@ -24,12 +24,13 @@ export class CommonTableTwoComponent implements OnInit {
   selectAllContainer: Map<number, any> = new Map();
   selectedRow: Map<number, any> = new Map();
   page = 0;
+  originalTableState: any[];
 
   constructor(private paginatorService: PaginatorPubSubService) {}
 
   ngOnInit() {
-    const originalTableState = this.tableData;
-    this.handlePaginatorService(originalTableState);
+    this.originalTableState = this.tableData;
+    this.handlePaginatorService(this.originalTableState);
     this.tableData = this.tableData.slice(0, this.rowsPerPage);
   }
 
