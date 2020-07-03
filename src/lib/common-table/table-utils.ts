@@ -6,6 +6,21 @@ export interface IHeaders {
   prop: string;
 }
 
+export const chunckArray = (array: any[], size: number) =>
+  array
+    .map((_: any, index: number) => (index % size === 0 ? array.slice(index, index + size) : null))
+    .filter((element: any) => element);
+
+// export const chunckArray = (array: any[], size: number): any[] => {
+//   const chunckedArray = [];
+//   const arrayCopy = [...array];
+//   const childrenArrays = Math.ceil(arrayCopy.length / size);
+//   for (let i = 0; i < childrenArrays; i++) {
+//     chunckedArray.push(arrayCopy.splice(0, size));
+//   }
+//   return chunckedArray;
+// };
+
 export const handleAscSort = (tableData: any[], selectedHeader: string) =>
   tableData.sort((a, b) => {
     if (typeof a[selectedHeader] === 'number' || typeof b[selectedHeader] === 'number') {

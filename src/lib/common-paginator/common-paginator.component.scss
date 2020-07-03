@@ -13,3 +13,22 @@ footer {
   height: 100%;
   width: 100%;
 }
+
+.pages {
+  padding: 0.5rem;
+  background-color: white;
+  color: #848484;
+  cursor: pointer;
+}
+
+.pages:hover {
+  background-color: #848484;
+  color: white;
+}
+
+.is-current-page {
+  padding: 0.5rem;
+  background-color: #007ad9;
+  color: white;
+  cursor: pointer;
+}

@@ -1,5 +1,87 @@
-.tableStyleClass {
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.fa-chevron-down {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.fa-chevron-up {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.table-container {
   height: 100%;
   width: 100%;
-  border: 1px solid black;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.active {
+  background-color: #007ad9;
+}
+
+th {
+  text-align: left;
+  transition: 0.3s;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(219, 215, 215);
+}
+
+td {
+  text-align: left;
+  padding: 1rem;
+  transition: 0.3s;
+  border-bottom: 1px solid rgb(219, 215, 215);
+  cursor: pointer;
+}
+
+.white-check {
+  color: white;
+}
+
+.check-box {
+  display: flex;
+  justify-content: center;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #555;
+  margin-right: 10px;
+  margin-bottom: 0.2rem;
+}
+
+.all-selected {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #555;
+  margin-right: 10px;
+  margin-bottom: 0.2rem;
+  background-color: #007ad9;
+  color: white;
+}
+
+.edit-icon {
+  color: blue;
+}
+
+.trash-icon {
+  color: red;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }

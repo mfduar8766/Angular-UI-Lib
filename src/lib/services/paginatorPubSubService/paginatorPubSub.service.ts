@@ -6,18 +6,14 @@ export class PaginatorPubSubService {
   private state$ = new BehaviorSubject<any>({
     rowsPerPage: null,
     tableData: [],
-    data: [],
-    page: null,
-    tableDataOriginalState: []
+    page: 0
   });
 
   changeState(value) {
     this.state$.next({
       rowsPerPage: value.rowsPerPage,
       tableData: value.tableData,
-      data: value.data,
-      page: value.page,
-      tableDataOriginalState: value.tableDataOriginalState
+      page: value.page
     });
   }
 

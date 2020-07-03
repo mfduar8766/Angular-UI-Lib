@@ -1464,6 +1464,24 @@ export const mockData = [
     //     ]
     //   }
     // ]
+  },
+  {
+    agencyName: 'Sample Agency X',
+    agencyId: 12000,
+    city: 'Fort Worth',
+    state: 'TX',
+    address: '123 NE Rd',
+    zipCode: '76101',
+    totalAgents: 5
+  },
+  {
+    agencyName: 'Sample Agency XI',
+    agencyId: 12000,
+    city: 'New York City',
+    state: 'NY',
+    address: '123 NE Rd',
+    zipCode: '76101',
+    totalAgents: 5
   }
 ];
 
